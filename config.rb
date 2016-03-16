@@ -27,9 +27,7 @@ end
 activate :directory_indexes
 
 #activating blog together with the gem
-activate :blog do |blog|
-  # set options on blog
-end
+activate :blog
 
 ###
 # Helpers
