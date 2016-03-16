@@ -21,6 +21,14 @@ page '/*.txt', layout: false
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
+
+end
+#pretty urls
+activate :directory_indexes
+
+#activating blog together with the gem
+activate :blog do |blog|
+  # set options on blog
 end
 
 ###
