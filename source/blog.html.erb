@@ -1,49 +1,244 @@
 ---
+title: blog
 pageable: true
-per_page: 10
-layout: index
+per_page: 1
 ---
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
 
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
+<style>
 
-          <% page_articles.each_with_index do |article, i| %>
+.navi{ z-index: 10;}
 
-              <h2><%= link_to article.title, article %> </h2>
-              <p><span><%= article.date.strftime('%b %e') %></span></p>
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-              <%= article.summary(75) %>
-            </div>
-          </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-        <h2>Tags</h2>
-        <ol>
-          <% blog.tags.each do |tag, articles| %>
-            <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
-          <% end %>
-        </ol>
+  html {
+    overflow-y: scroll;
+  }
 
-        <h2>By Year</h2>
-        <ol>
-          <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-            <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
-          <% end %>
-        </ol>
-      </div>
-    </div>
-  </div>
+  body {
+    background: #7bb7fa;
+    !important;
+    transition: 2000ms ease-in;
+
+  }
+
+  .grid-item {
+    width: 300px;
+    background-color: #fff;
+    min-width: 175px;
+    box-shadow: 0 2px 5px;
+    padding-bottom: 40px;
+    padding: 20px;
+
+  }
+  .grid-item-content {
+
+
+        padding-bottom: 40px;
+  }
+
+  .grid-item-footer-content{
+
+
+        padding-bottom: 40px;
+  }
+
+  .grid-item--foot{
+    width: 300px;
+    box-shadow: 0 2px 10px;
+    padding-bottom: 40px;
+
+  }
+
+  .grid-item--achievments{
+
+    width:60px;
+    min-width: 60px;
+
+  }
+  .grid-item--contactinfo {
+    width: 300px;
+    height: 512px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 10px;
+
+  }
+
+  /* highlight drag & drop */
+
+  /* Draggabilly adds is-dragging */
+  /* Packery adds class while transitioning to drop position */
+  .grid-item.is-dragging,
+  .grid-item.is-positioning-post-drag {
+    background: rgba(68, 68, 68, 0.65);
+    z-index: 2;
+    /* keep dragged item on top */
+  }
+
+  .packery-drop-placeholder {
+    outline: 8px dashed rgba(68, 68, 68, 0.65);
+    outline-offset: -6px;
+    /* transition position changing */
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+
+  }
+
+
+
+
+  .stamp {
+  position: absolute;
+
+  background: #FFF;
+
+}
+
+.stamp1 {
+  left: 0px;
+  top: 0px;
+  background-image: url('/images/Khalil-Gharbaoui-Logo.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.stamp2 {
+  left: 0px;
+  top: 0px;
+}
+.stamp3 {
+  left: 0px;
+  top: 0px;
+
+  background-image: url('/images/GitHub-Mark-64px.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+.stamp4 {
+  left: 0px;
+  top: 0px;
+
+  background-image: url('/images/In-Black-66px-TM.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+.stamp5 {
+  left: 0px;
+  top: 0px;
+
+  background-image: url('/images/PartnerBadge-151030.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 92px !important;
+  width: 179;
+  height: 38;
+}
+
+.stampcopy{
+  position: absolute; left: 18.8482%; top: 188px; height: 12px;
+}
+
+</style>
+
+<div class="blog" >
+
+  <div class="grid" id="bloggrid">
+
+    <div class="grid-item grid-item--achievments stamp stamp1">
+  <a href="/"><div class="grid-item-content">
+  </div></a>
 </div>
 
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
+    <div class="grid-item grid-item--contactinfo stamp stamp2">
+      <div class="grid-item-content">
+        <p>
+          Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've
+          already been through too much shit this morning over this case to hand it over to your dumb ass.
+        </p>
+      </div>
+    </div>
+
+    <!-- <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'> -->
+    <% page_articles.each_with_index do |article, i| %>
+    <div class="grid-item" id="loopitem">
+     <div class="grid-item-content">
+    <h2><%= link_to article.title, article %></h2>
+      <%= article.date.strftime('%b %e') %>
+      <!-- use article.summary(250) if you have Nokogiri available to show just
+       the first 250 characters -->
+      <%= article.summary(250) %>
+    </div>
+  </div>
   <% end %>
+</div>
+<br />
+
+
+<% if paginate && num_pages > 1 %>
+<p>Page
+  <%= page_number %>
+  of
+  <%= num_pages %></p>
+
+<% if prev_page %>
+<p><%= link_to 'Previous page', prev_page %></p>
 <% end %>
+<% end %>
+
+<% if paginate %>
+<% if next_page %>
+
+
+<div class="navi"><%= link_to 'Next page', next_page, class: "nextpage" %></div>
+<% end %>
+<% end %>
+
+
+<div class="grid">
+
+  <div class="grid-item grid-item--achievments stamp stamp3">
+<div class="grid-item-content">
+
+</div>
+</div>
+<div class="grid-item grid-item--achievments stamp stamp4">
+<div class="grid-item-content">
+
+</div>
+</div>
+<div class="grid-item grid-item--achievments stamp stamp5">
+<div class="grid-item-content">
+
+</div>
+</div>
+</div>
+<br />
+<!-- footer grid -->
+<div class="grid">
+  <div class="grid-item grid-item--foot">
+    <div class="grid-item-footer-content">
+      <h2>Tags</h2>
+        <ul id="cloud">
+        <% blog.tags.each do |tag, articles| %>
+        <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag), class: "tag#{articles.size}"  %></li>
+        <% end %>
+        <!-- ARRARNAME.each_with_object(Hash.new(0)) { |tag, count| count[tag] += 1 } -->
+      </ul>
+    </div>
+  </div>
+  <div class="grid-item grid-item--foot">
+    <div class="grid-item-footer-content">
+      <h2>By Year</h2>
+      <ul id="cloud">
+  <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+      <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
+      <% end %>
+    </ul>
+    </div>
+  </div>
+
+<div class="grid-item stamp stampcopy">
+  <div class="grid-item-content">
+    <p style="margin-top: -3.3;">©2016 Khalil Gharbaoui</p>
+  </div>
+  </div>
+  </div>
+  </div>

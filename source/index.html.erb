@@ -5,21 +5,13 @@ tags:
 category:
 ---
 
+
 <div class="welcome">
-  <canvas id="map"></canvas>
   <div class="logo">
-    <%= image_tag "Khalil-Gharbaoui-Blog.png" %>
+    <%= image_tag "Khalil-Gharbaoui-Blog-Intro.png" %>
   </div>
-
-  <p class="doc">
-    <!-- <%= link_to "Read Documentation Online", "https://middlemanapp.com", target: "_blank" %> -->
-  </p><!-- .doc -->
+  <h1 class="slogan" id="slogan">To create... I am Khalil Gharbaoui, welcome to my developer blog.</h1>
+  <%= link_to "<div id='readit' class='button-container readit'>
+    <div class='button -white center'>Check it!</div>
+  </div>", "/blog.html", target: "_self", class: "readit", id: "readit" %>
 </div><!-- .welcome -->
-<h1 class="slogan" id="slogan">To create... I am Khalil Gharbaoui, welcome to my developer blog.</h1>
-</br>
-</br>
-
-
-<%= link_to "<div id='readit' class='button-container readit'>
-  <div class='button -white center'>Check it!</div>
-</div>", "/blog.html", target: "_self", class: "readit", id: "readit" %>
