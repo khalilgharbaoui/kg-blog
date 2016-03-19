@@ -1,12 +1,14 @@
 ---
 title: blog
 pageable: true
-per_page: 1
+per_page: 3
 ---
 
 <style>
 
-.navi{ z-index: 10;}
+  .navi {
+    z-index: 10;
+  }
 
   html {
     overflow-y: scroll;
@@ -20,41 +22,38 @@ per_page: 1
   }
 
   .grid-item {
-    width: 300px;
+    width: 280px;
     background-color: #fff;
-    min-width: 175px;
+
     box-shadow: 0 2px 5px;
-    padding-bottom: 40px;
     padding: 20px;
 
   }
   .grid-item-content {
 
-
-        padding-bottom: 40px;
+    padding-bottom: 40px;
   }
 
-  .grid-item-footer-content{
+  .grid-item-footer-content {
 
-
-        padding-bottom: 40px;
+    padding-bottom: 40px;
   }
 
-  .grid-item--foot{
-    width: 300px;
+  .grid-item--foot {
+
     box-shadow: 0 2px 10px;
     padding-bottom: 40px;
 
   }
 
-  .grid-item--achievments{
+  .grid-item--achievments {
 
-    width:60px;
-    min-width: 60px;
+    width: 53px;
+
 
   }
   .grid-item--contactinfo {
-    width: 300px;
+
     height: 512px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 2px 10px;
@@ -81,72 +80,192 @@ per_page: 1
 
   }
 
-
-
-
   .stamp {
-  position: absolute;
+    position: absolute;
 
-  background: #FFF;
+    background: #FFF;
+
+  }
+
+  .stamp1 {
+    left: 0;
+    top: 0;
+    background-image: url('/images/Khalil-Gharbaoui-Logo.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .stamp2 {
+    left: 0;
+    top: 0;
+  }
+  .stamp3 {
+    left: 0;
+    top: 0;
+
+    background-image: url('/images/GitHub-Mark-64px.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+
+  }
+  .stamp4 {
+    left: 0;
+    top: 0;
+
+    background-image: url('/images/In-2C-66px-TM.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+
+  }
+  .stamp-Google-Partner-Badge {
+    left: 0;
+    top: 0;
+
+    background-image: url('/images/PartnerBadge-151030.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 92px !important;
+    width: 167;
+    height: 38;
+  }
+
+  .stampempty{
+    left: 0;
+    top: 0;
+    width:280px;
+    height: 38;
+    box-shadow: 0 0px 0px;
+    background: none;
+  }
+
+  .stampcopy {
+    position: absolute;
+    left: 18.8482%;
+    top: 188px;
+    height: 12px;
+  }
+
+  #infscr-loading {
+      position: absolute!important;
+      width: 400px!important;
+      height: 40px!important;
+      bottom: 0;
+      left: 50%;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      box-shadow: 0 5px 8px 0;
+      border-radius: 20px;
+      border: 2px solid #000;
+      padding: 30px 10px 10px 10px;
+      margin-left: -210px;
+      background-color: #fff;
+      font-weight: bold;
+      font-family: "Comic Sans MS", cursive;
+      /* transition: ease-out 4500ms 1000ms; */
+      z-index: 200;
+      font-size: 14px;
+  }
+
+  #infscr-loading:after {
+    content: "";
+    display: block;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-width: 0 2px 2px 0;
+    width: 24px;
+    height: 24px;
+    border-top: 0px;
+
+    box-shadow: 4px 2px 0px 0px rgba(0,0,0,.6);
+    position: absolute;
+    bottom: -15px;
+    left: 190px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+
+      z-index: 199;
 
 }
 
-.stamp1 {
-  left: 0px;
-  top: 0px;
-  background-image: url('/images/Khalil-Gharbaoui-Logo.png');
+.blogbutton{
+    box-shadow: 0 2px 5px rgba(0,0,0,.6);
+
+
+}
+.buttonfix{    padding-top: 40px;
+    padding-bottom: 60px;}
+.blogbutton:hover + div#infscr{display: block !important;}
+
+
+.stamp6{
+    left: 0;
+    top: 0;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 38;
+}
+
+
+
+.stamp-NodeJS{
+  left: 0;
+  top: 0;
+
+  background-image: url('/images/NodeJS.png');
   background-repeat: no-repeat;
   background-position: center center;
+    height: 38;
 }
-.stamp2 {
-  left: 0px;
-  top: 0px;
-}
-.stamp3 {
-  left: 0px;
-  top: 0px;
 
-  background-image: url('/images/GitHub-Mark-64px.png');
+.stamp-ReactJS{
+  left: 0;
+  top: 0;
+
+  background-image: url('/images/ReactJs.png');
   background-repeat: no-repeat;
   background-position: center center;
-
+    height: 38;
 }
-.stamp4 {
-  left: 0px;
-  top: 0px;
+.stamp-Ruby-on-rails{
+  left: 0;
+  top: 0;
+    background-image: url('/images/ruby-on-rails.png');
 
-  background-image: url('/images/In-Black-66px-TM.png');
   background-repeat: no-repeat;
   background-position: center center;
-
+    height: 38;
 }
-.stamp5 {
-  left: 0px;
-  top: 0px;
+.stamp-Ruby{
+  left: 0;
+  top: 0;
 
-  background-image: url('/images/PartnerBadge-151030.png');
+    background-image: url('/images/ruby.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: auto 92px !important;
-  width: 179;
-  height: 38;
+    height: 38;
 }
 
-.stampcopy{
-  position: absolute; left: 18.8482%; top: 188px; height: 12px;
-}
 
+  .email{
+    display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 60;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: -11px;
+  margin-left: -1px;
+  font-weight: bold;
+  color: #7BB7FA;
+
+  }
 </style>
 
-<div class="blog" >
+<div class="blog">
 
   <div class="grid" id="bloggrid">
-
-    <div class="grid-item grid-item--achievments stamp stamp1">
-  <a href="/"><div class="grid-item-content">
-  </div></a>
-</div>
-
     <div class="grid-item grid-item--contactinfo stamp stamp2">
       <div class="grid-item-content">
         <p>
@@ -159,86 +278,106 @@ per_page: 1
     <!-- <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'> -->
     <% page_articles.each_with_index do |article, i| %>
     <div class="grid-item" id="loopitem">
-     <div class="grid-item-content">
-    <h2><%= link_to article.title, article %></h2>
-      <%= article.date.strftime('%b %e') %>
-      <!-- use article.summary(250) if you have Nokogiri available to show just
+      <div class="grid-item-content">
+        <h2><%= link_to article.title, article %></h2>
+        <%= article.date.strftime('%b %e') %>
+        <!-- use article.summary(250) if you have Nokogiri available to show just
        the first 250 characters -->
-      <%= article.summary(250) %>
+        <%= article.summary(250) %>
+      </div>
     </div>
+    <% end %>
   </div>
-  <% end %>
-</div>
-<br />
-
-
-<% if paginate && num_pages > 1 %>
-<p>Page
+  <br/>
+  <center>
+  <% if paginate && num_pages > 1 %>
+  <!-- <p>Page
   <%= page_number %>
   of
-  <%= num_pages %></p>
+  <%= num_pages %></p> -->
 
-<% if prev_page %>
-<p><%= link_to 'Previous page', prev_page %></p>
-<% end %>
-<% end %>
+  <% if prev_page %>
+  <p><%= link_to 'Previous page', prev_page %></p>
+  <% end %>
+  <% end %>
 
-<% if paginate %>
-<% if next_page %>
+  <% if paginate %>
+  <% if next_page %>
+  <center class="buttonfix">
+  <button class="button -green blogbutton" onclick="resumeInfiniteScroll()">Show more posts</button>
 
-
-<div class="navi"><%= link_to 'Next page', next_page, class: "nextpage" %></div>
-<% end %>
-<% end %>
-
-
+  <div class="navi"><%= link_to '', next_page, class: "nextpage" %></div>
+  <% end %>
+  <% end %>
+</center>
 <div class="grid">
 
+
+  <div class="grid-item grid-item--achievments stamp stamp6">
+    <a href="mailto:khalilgharbaoui@hotmail.com" target="_blank"><i class="fa fa-envelope-o email">&nbsp;</i><div class="grid-item-content"></div></a>
+  </div>
   <div class="grid-item grid-item--achievments stamp stamp3">
-<div class="grid-item-content">
+    <a href="https://github.com/khalilgharbaoui" target="_blank"><div class="grid-item-content"></div></a>
+  </div>
+  <div class="grid-item grid-item--achievments stamp stamp4">
+    <a href="https://ch.linkedin.com/in/khalilgharbaoui" target="_blank"><div class="grid-item-content"></div></a>
+  </div>
+</div>
+<br / />
+  <div class="grid">
+    <div class="grid-item grid-item--achievments stamp stampempty">
+      <div class="grid-item-content"></div>
+    </div>
+    <div class="grid-item grid-item--achievments stamp stampempty">
+      <div class="grid-item-content"></div>
+    </div>
+    <div class="grid-item grid-item--achievments stamp stamp-NodeJS">
+      <a href="" target="_blank">  <div class="grid-item-content"></div></a>
+    </div>
+    <div class="grid-item grid-item--achievments stamp stamp-ReactJS">
+        <a href="" target="_blank">  <div class="grid-item-content"></div></a>
+    </div>
+    <div class="grid-item grid-item--achievments stamp stamp-Ruby">
+        <a href="" target="_blank">  <div class="grid-item-content"></div></a>
+    </div>
+    <div class="grid-item grid-item--achievments stamp stamp-Ruby-on-rails">
+      <a href="" target="_blank"><div class="grid-item-content"></div></a>
+    </div>
+    <div class="grid-item grid-item--achievments stamp stamp-Google-Partner-Badge">
+      <a href="https://www.google.com/partners/?hl=en-GB#a_profile;idtf=7256334643;" target="_blank"><div class="grid-item-content"></div></a>
+    </div>
 
 </div>
-</div>
-<div class="grid-item grid-item--achievments stamp stamp4">
-<div class="grid-item-content">
-
-</div>
-</div>
-<div class="grid-item grid-item--achievments stamp stamp5">
-<div class="grid-item-content">
-
-</div>
-</div>
-</div>
-<br />
-<!-- footer grid -->
-<div class="grid">
-  <div class="grid-item grid-item--foot">
-    <div class="grid-item-footer-content">
-      <h2>Tags</h2>
+  <br/>
+  <!-- footer grid -->
+  <div class="grid">
+    <div class="grid-item grid-item--foot">
+      <div class="grid-item-footer-content">
+        <h2>Tags</h2>
         <ul id="cloud">
-        <% blog.tags.each do |tag, articles| %>
-        <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag), class: "tag#{articles.size}"  %></li>
-        <% end %>
-        <!-- ARRARNAME.each_with_object(Hash.new(0)) { |tag, count| count[tag] += 1 } -->
-      </ul>
+          <% blog.tags.each do |tag, articles| %>
+          <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag), class: "tag#{articles.size}"  %></li>
+          <% end %>
+          <!-- ARRARNAME.each_with_object(Hash.new(0)) { |tag, count| count[tag] += 1 } -->
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="grid-item grid-item--foot">
-    <div class="grid-item-footer-content">
-      <h2>By Year</h2>
-      <ul id="cloud">
-  <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-      <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
-      <% end %>
-    </ul>
+    <div class="grid-item grid-item--foot">
+      <div class="grid-item-footer-content">
+        <h2>By Year</h2>
+        <ul id="cloud">
+          <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+          <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
-  </div>
 
-<div class="grid-item stamp stampcopy">
-  <div class="grid-item-content">
-    <p style="margin-top: -3.3;">©2016 Khalil Gharbaoui</p>
+    <div class="grid-item stamp stampcopy">
+      <div class="grid-item-content">
+        <p style="margin-top: -3.3;">©2016 Khalil Gharbaoui</p>
+      </div>
+    </div>
   </div>
-  </div>
-  </div>
-  </div>
+  <br />
+</div>

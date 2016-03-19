@@ -215,7 +215,7 @@ var update = function() {
 // initialize Packery
 $(document).ready(function () {
 
-
+    event.preventDefault();
 
 
 
@@ -233,8 +233,14 @@ $(document).ready(function () {
 
 
 
+
+
+
 var $grid = $('#bloggrid').packery({
-  itemSelector: '#loopitem'
+  itemSelector: '#loopitem',
+   gutter: 20,
+   percentPosition: true
+
 
 });
 
@@ -250,17 +256,16 @@ $grid.infinitescroll({
   itemSelector : "#loopitem"
                  // selector for all items you'll retrieve
 
-
-
-
-
 }, function( newItems ) {
   var $newItems = $(newItems);
 
     $grid.packery( 'appended', $newItems );
+
     $newItems.each( makeEachDraggable );
+    $grid.infinitescroll('pause');
 
 });
+    $grid.infinitescroll('pause');
 
 // make all grid-items draggable
 $grid.find('#looitem').each( function( i, gridItem ) {
@@ -278,13 +283,17 @@ function makeEachDraggable( i, gridItem ) {
 $grid.packery( 'bindDraggabillyEvents', draggie );
 }
 
-
-
-
-
-
-
-
-
-
 });
+
+function fire() {
+        event.preventDefault();
+  setInterval(function(){
+$('.grid').infinitescroll('resume');
+$('.grid').infinitescroll('scroll');
+  },1000);
+}
+function resumeInfiniteScroll(){
+    event.preventDefault();
+fire();
+
+}
