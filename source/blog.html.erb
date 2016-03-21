@@ -10,269 +10,60 @@ per_page: 3
     z-index: 10;
   }
 
-  html {
-    overflow-y: scroll;
-  }
 
   body {
-    background: #7bb7fa;
-    !important;
+    background: #7bb7fa!important;
     transition: 2000ms ease-in;
 
   }
 
-  .grid-item {
-    width: 280px;
-    background-color: #fff;
-
-    box-shadow: 0 2px 5px;
-    padding: 20px;
-
-  }
-  .grid-item-content {
-
-    padding-bottom: 40px;
-  }
-
-  .grid-item-footer-content {
-
-    padding-bottom: 40px;
-  }
-
-  .grid-item--foot {
-
-    box-shadow: 0 2px 10px;
-    padding-bottom: 40px;
-
-  }
-
-  .grid-item--achievments {
-
-    width: 53px;
+  .box {
+     background: none !important;
+     padding: 0px !important;
+     box-shadow: 0 0px 0px !important;
+     z-index: 0 !important;
+       position:inherit;
+       margin-bottom: auto !important;
+       pointer-events: none;
+ }
 
 
-  }
-  .grid-item--contactinfo {
-
-    height: 512px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 2px 10px;
-
-  }
-
-  /* highlight drag & drop */
-
-  /* Draggabilly adds is-dragging */
-  /* Packery adds class while transitioning to drop position */
-  .grid-item.is-dragging,
-  .grid-item.is-positioning-post-drag {
-    background: rgba(68, 68, 68, 0.65);
-    z-index: 2;
-    /* keep dragged item on top */
-  }
-
-  .packery-drop-placeholder {
-    outline: 8px dashed rgba(68, 68, 68, 0.65);
-    outline-offset: -6px;
-    /* transition position changing */
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
-
-  }
-
-  .stamp {
-    position: absolute;
-
-    background: #FFF;
-
-  }
-
-  .stamp1 {
-    left: 0;
-    top: 0;
-    background-image: url('/images/Khalil-Gharbaoui-Logo.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  .stamp2 {
-    left: 0;
-    top: 0;
-  }
-  .stamp3 {
-    left: 0;
-    top: 0;
-
-    background-image: url('/images/GitHub-Mark-64px.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-
-  }
-  .stamp4 {
-    left: 0;
-    top: 0;
-
-    background-image: url('/images/In-2C-66px-TM.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-
-  }
-  .stamp-Google-Partner-Badge {
-    left: 0;
-    top: 0;
-
-    background-image: url('/images/PartnerBadge-151030.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: auto 92px !important;
-    width: 167;
-    height: 38;
-  }
-
-  .stampempty{
-    left: 0;
-    top: 0;
-    width:280px;
-    height: 38;
-    box-shadow: 0 0px 0px;
-    background: none;
-  }
-
-  .stampcopy {
-    position: absolute;
-    left: 18.8482%;
-    top: 188px;
-    height: 12px;
-  }
-
-  #infscr-loading {
-      position: absolute!important;
-      width: 400px!important;
-      height: 40px!important;
-      bottom: 0;
-      left: 50%;
-      margin-top: 10px;
-      margin-bottom: 5px;
-      box-shadow: 0 5px 8px 0;
-      border-radius: 20px;
-      border: 2px solid #000;
-      padding: 30px 10px 10px 10px;
-      margin-left: -210px;
-      background-color: #fff;
-      font-weight: bold;
-      font-family: "Comic Sans MS", cursive;
-      /* transition: ease-out 4500ms 1000ms; */
-      z-index: 200;
-      font-size: 14px;
-  }
-
-  #infscr-loading:after {
-    content: "";
-    display: block;
-    background-color: #fff;
-    border: 2px solid #000;
-    border-width: 0 2px 2px 0;
-    width: 24px;
-    height: 24px;
-    border-top: 0px;
-
-    box-shadow: 4px 2px 0px 0px rgba(0,0,0,.6);
-    position: absolute;
-    bottom: -15px;
-    left: 190px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-
-      z-index: 199;
-
-}
-
-.blogbutton{
-    box-shadow: 0 2px 5px rgba(0,0,0,.6);
-
-
-}
-.buttonfix{    padding-top: 40px;
-    padding-bottom: 60px;}
-.blogbutton:hover + div#infscr{display: block !important;}
-
-
-.stamp6{
-    left: 0;
-    top: 0;
-
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 38;
-}
-
-
-
-.stamp-NodeJS{
-  left: 0;
-  top: 0;
-
-  background-image: url('/images/NodeJS.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-    height: 38;
-}
-
-.stamp-ReactJS{
-  left: 0;
-  top: 0;
-
-  background-image: url('/images/ReactJs.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-    height: 38;
-}
-.stamp-Ruby-on-rails{
-  left: 0;
-  top: 0;
-    background-image: url('/images/ruby-on-rails.png');
-
-  background-repeat: no-repeat;
-  background-position: center center;
-    height: 38;
-}
-.stamp-Ruby{
-  left: 0;
-  top: 0;
-
-    background-image: url('/images/ruby.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-    height: 38;
-}
-
-
-  .email{
-    display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: 60;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin-top: -11px;
-  margin-left: -1px;
-  font-weight: bold;
-  color: #7BB7FA;
-
-  }
 </style>
 
-<div class="blog">
-
+<div class="blog box">
   <div class="grid" id="bloggrid">
+
     <div class="grid-item grid-item--contactinfo stamp stamp2">
       <div class="grid-item-content">
-        <p>
-          Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've
-          already been through too much shit this morning over this case to hand it over to your dumb ass.
-        </p>
+<p>After years of web-designing, implementing and utilizing third-party applications to make the web.</p>
+<p>I decided to rise up to a new challenge by becoming a full stack developer.</p>
+
+<p>To be able to code and create in multiple languages limited only by imagination... opens up a whole new world full of opportunities.
+
+<p>So I toke it upon my self to learn the way of the code...</p>
+
+<p>Languages based on Ruby and JavaScript interest me the most.</p>
+
+<h2>Who I am...</h2>
+
+<img class="img-circle" src="https://avatars2.githubusercontent.com/u/8024057?v=3&s=460" />
+
+<p>I am Khalil Gharbaoui.</p>
+
+<p>Read about my findings and experiences here on my developer blog.</p>
       </div>
+    </div>
+    <!-- Contact Buttons -->
+    <!-- <div class="grid"> -->
+    <div class="grid-item grid-item--achievments stamp stamp6">
+        <a href="mailto:khalilgharbaoui@hotmail.com" target="_blank"><i class="fa fa-envelope-o email">&nbsp;</i><div class="grid-item-content"></div></a>
+      </div>
+      <div class="grid-item grid-item--achievments stamp stamp3">
+        <a href="https://github.com/khalilgharbaoui" target="_blank"><div class="grid-item-content"></div></a>
+      </div>
+      <div class="grid-item grid-item--achievments stamp stamp4">
+        <a href="https://ch.linkedin.com/in/khalilgharbaoui" target="_blank"><div class="grid-item-content"></div></a>
+      <!-- </div> -->
     </div>
 
     <!-- <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'> -->
@@ -300,84 +91,15 @@ per_page: 3
   <p><%= link_to 'Previous page', prev_page %></p>
   <% end %>
   <% end %>
-
+  
   <% if paginate %>
   <% if next_page %>
   <center class="buttonfix">
-  <button class="button -green blogbutton" onclick="resumeInfiniteScroll()">Show more posts</button>
+  <button class="button -green blogbutton" onclick="resumeInfiniteScroll(event)">Show more posts</button>
 
-  <div class="navi"><%= link_to '', next_page, class: "nextpage" %></div>
+  <div class="navi" style="pointer-events: all;"><%= link_to '', next_page, class: "nextpage" %></div>
   <% end %>
   <% end %>
 </center>
-<div class="grid">
 
-
-  <div class="grid-item grid-item--achievments stamp stamp6">
-    <a href="mailto:khalilgharbaoui@hotmail.com" target="_blank"><i class="fa fa-envelope-o email">&nbsp;</i><div class="grid-item-content"></div></a>
-  </div>
-  <div class="grid-item grid-item--achievments stamp stamp3">
-    <a href="https://github.com/khalilgharbaoui" target="_blank"><div class="grid-item-content"></div></a>
-  </div>
-  <div class="grid-item grid-item--achievments stamp stamp4">
-    <a href="https://ch.linkedin.com/in/khalilgharbaoui" target="_blank"><div class="grid-item-content"></div></a>
-  </div>
-</div>
-<br / />
-  <div class="grid">
-    <div class="grid-item grid-item--achievments stamp stampempty">
-      <div class="grid-item-content"></div>
-    </div>
-    <div class="grid-item grid-item--achievments stamp stampempty">
-      <div class="grid-item-content"></div>
-    </div>
-    <div class="grid-item grid-item--achievments stamp stamp-NodeJS">
-      <a href="" target="_blank">  <div class="grid-item-content"></div></a>
-    </div>
-    <div class="grid-item grid-item--achievments stamp stamp-ReactJS">
-        <a href="" target="_blank">  <div class="grid-item-content"></div></a>
-    </div>
-    <div class="grid-item grid-item--achievments stamp stamp-Ruby">
-        <a href="" target="_blank">  <div class="grid-item-content"></div></a>
-    </div>
-    <div class="grid-item grid-item--achievments stamp stamp-Ruby-on-rails">
-      <a href="" target="_blank"><div class="grid-item-content"></div></a>
-    </div>
-    <div class="grid-item grid-item--achievments stamp stamp-Google-Partner-Badge">
-      <a href="https://www.google.com/partners/?hl=en-GB#a_profile;idtf=7256334643;" target="_blank"><div class="grid-item-content"></div></a>
-    </div>
-
-</div>
-  <br/>
-  <!-- footer grid -->
-  <div class="grid">
-    <div class="grid-item grid-item--foot">
-      <div class="grid-item-footer-content">
-        <h2>Tags</h2>
-        <ul id="cloud">
-          <% blog.tags.each do |tag, articles| %>
-          <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag), class: "tag#{articles.size}"  %></li>
-          <% end %>
-          <!-- ARRARNAME.each_with_object(Hash.new(0)) { |tag, count| count[tag] += 1 } -->
-        </ul>
-      </div>
-    </div>
-    <div class="grid-item grid-item--foot">
-      <div class="grid-item-footer-content">
-        <h2>By Year</h2>
-        <ul id="cloud">
-          <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-          <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-
-    <div class="grid-item stamp stampcopy">
-      <div class="grid-item-content">
-        <p style="margin-top: -3.3;">©2016 Khalil Gharbaoui</p>
-      </div>
-    </div>
-  </div>
-  <br />
 </div>

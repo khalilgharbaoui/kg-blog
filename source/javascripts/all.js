@@ -215,7 +215,7 @@ var update = function() {
 // initialize Packery
 $(document).ready(function () {
 
-    event.preventDefault();
+
 
 
 
@@ -260,40 +260,40 @@ $grid.infinitescroll({
   var $newItems = $(newItems);
 
     $grid.packery( 'appended', $newItems );
-
-    $newItems.each( makeEachDraggable );
+    // this one make blog posts drageble
+    // $newItems.each( makeEachDraggable );
     $grid.infinitescroll('pause');
 
 });
     $grid.infinitescroll('pause');
 
-// make all grid-items draggable
-$grid.find('#looitem').each( function( i, gridItem ) {
-  var draggie = new Draggabilly( gridItem );
-  // bind drag events to Packery
-  $grid.packery( 'bindDraggabillyEvents', draggie );
-});
-$grid.find('#loopitem').each( makeEachDraggable );
-// bind draggabilly events to item elements
+// // make all grid-items draggable
+// $grid.find('#looitem').each( function( i, gridItem ) {
+//   var draggie = new Draggabilly( gridItem );
+//   // bind drag events to Packery
+//   $grid.packery( 'bindDraggabillyEvents', draggie );
+// });
+// $grid.find('#loopitem').each( makeEachDraggable );
+// // bind draggabilly events to item elements
 
-function makeEachDraggable( i, gridItem ) {
-  // make element draggable with Draggabilly
-  var draggie = new Draggabilly( gridItem );
-  // bind Draggabilly events to Packery
-$grid.packery( 'bindDraggabillyEvents', draggie );
-}
+// function makeEachDraggable( i, gridItem ) {
+//   // make element draggable with Draggabilly
+//   var draggie = new Draggabilly( gridItem );
+//   // bind Draggabilly events to Packery
+// $grid.packery( 'bindDraggabillyEvents', draggie );
+// }
 
 });
 
 function fire() {
-        event.preventDefault();
+
   setInterval(function(){
 $('.grid').infinitescroll('resume');
 $('.grid').infinitescroll('scroll');
   },1000);
 }
-function resumeInfiniteScroll(){
-    event.preventDefault();
+function resumeInfiniteScroll(event){
+        event.preventDefault();
 fire();
 
 }

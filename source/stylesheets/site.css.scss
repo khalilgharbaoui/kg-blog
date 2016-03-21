@@ -1,47 +1,40 @@
 @charset "utf-8";
 @import "normalize";
 @import "custom-buttons";
+@import "typography";
+//
 
-body {
-  background: #ec2b27;
-  text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em;
+// force vertical scrollbar, prevent Packery gap
+html {
+  overflow-y: scroll;
 }
 
+img {max-width:100%;}
+
+a{pointer-events: all;}
+
+.img-circle {
+    border-radius: 50%;
+    display: block;
+    margin:0 auto;
+    width:160px;
+}
+.box{
+  margin-top: 0;
+margin-right: auto;
+margin-bottom: 0;
+margin-left: auto;
+width:768px;
+pointer-events: none;
+}
+
+// a {text-decoration: none;}
 .logo img {
   height: 18.75em;
   margin-top: 12em;
+
 }
 
-h1 {
-  color: rgba(0,0,0,0.5);
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.8em;
-  font-weight: 400;
-  margin: 0;
-}
-
-.doc {
-  margin: 3em 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
-
-  a {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 0.75em 0.7em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.1s linear;
-    &:hover {
-      background: rgba(0,0,0,0.2);
-      color: white;
-      transition: all 0.15s linear;
-    }
-  }
-}
 
 .welcome {
   -webkit-animation-name: welcome;
@@ -82,7 +75,7 @@ h1 {
 .slogan{
 
   animation: slogan 4600ms ease-out;
-
+  font-family: 'roboto' sans-serif;
   color:white;
   z-index: 10
 
@@ -215,7 +208,7 @@ padding-top: 10px;
 
 
 
-  .tags {
+.tags {
   list-style: none;
   margin: 0;
   overflow: hidden;
@@ -314,3 +307,377 @@ padding-top: 10px;
 {
   opacity:0.3;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grid-item--contactinfo {
+
+
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 10px;
+
+}
+
+/* highlight drag & drop */
+
+/* Draggabilly adds is-dragging */
+/* Packery adds class while transitioning to drop position */
+.grid-item.is-dragging,
+.grid-item.is-positioning-post-drag {
+  background: rgba(68, 68, 68, 0.65);
+  z-index: 2;
+  /* keep dragged item on top */
+}
+
+.packery-drop-placeholder {
+  outline: 8px dashed rgba(68, 68, 68, 0.65);
+  outline-offset: -6px;
+  /* transition position changing */
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+
+}
+
+.stamp {
+  position: absolute;
+
+  background: #FFF;
+
+}
+
+.stamp1 {
+  left: 0;
+  top: 0;
+  background-image: url('/images/Khalil-Gharbaoui-codez-it.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.stamp2 {
+  left: 0;
+  top: 0;
+}
+.stamp3 {
+  left: 0;
+  top: 0;
+
+  background-image: url('/images/GitHub-Mark-64px.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+.stamp4 {
+  left: 0;
+  top: 0;
+
+  background-image: url('/images/In-2C-66px-TM.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+
+
+
+#infscr-loading {
+    position: absolute!important;
+    width: 400px!important;
+    height: 40px!important;
+    bottom: 0;
+    left: 50%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0 5px 8px 0;
+    border-radius: 20px;
+    border: 2px solid #000;
+    padding: 30px 10px 10px 10px;
+    margin-left: -210px;
+    background-color: #fff;
+    font-weight: bold;
+    font-family: "Comic Sans MS", cursive;
+    /* transition: ease-out 4500ms 1000ms; */
+    text-align: center;
+    z-index: 200;
+    font-size: 14px;
+}
+
+#infscr-loading:after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-width: 0 2px 2px 0;
+  width: 24px;
+  height: 24px;
+  border-top: 0px;
+
+  box-shadow: 4px 2px 0px 0px rgba(0,0,0,.6);
+  position: absolute;
+  bottom: -15px;
+  left: 190px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+
+    z-index: 199;
+
+}
+
+.blogbutton{
+  box-shadow: 0 2px 5px rgba(0,0,0,.6);
+
+
+}
+.buttonfix{    padding-top: 40px;
+  padding-bottom: 60px;}
+.blogbutton:hover + div#infscr{display: block !important;}
+
+
+.stamp6{
+  left: 0;
+  top: 0;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 38;
+}
+
+.email{
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 60;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: -11px;
+  margin-left: -1px;
+  font-weight: bold;
+  color: #7BB7FA;
+
+}
+
+.grid-item {
+  width: 280px;
+  background-color: #fff;
+
+  box-shadow: 0 2px 5px;
+  padding: 20px;
+
+}
+
+
+  .grid-item--achievments {
+
+    width: 53px;
+
+
+  }
+.grid-item-content {
+
+  padding-bottom: 40px;
+}
+
+.box{
+
+  background: #fff;
+  padding: 25px;
+  box-shadow: 0 2px 10px;
+  z-index:100;
+  position: relative;
+  margin-bottom: 40px !important;
+  pointer-events: none;
+
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media (min-width: 320px) and (max-width: 480px) {
+/* Styles */
+.box{
+  margin-top: 0;
+margin-right: auto;
+margin-bottom: 0;
+margin-left: auto;
+width:320px;
+}
+.footer-box{
+  margin-top: 0;
+margin-right: auto;
+margin-bottom: 0;
+margin-left: auto;
+width:320px;
+}
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media (max-width: 320px) {
+/* Styles */
+.box{
+  margin-top: 0;
+margin-right: auto;
+margin-bottom: 0;
+margin-left: auto;
+width:320px;
+}
+.footer-box{
+  margin-top: 0;
+margin-right: auto;
+margin-bottom: 0;
+margin-left: auto;
+width:320px;
+}
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media (min-width: 481px) and (max-width: 767px) {
+/* Styles */
+.box{
+  margin-top: 0;
+margin-right: auto;
+margin-bottom: 0;
+margin-left: auto;
+width:436px;
+}
+.footer-box{
+  margin-top: 0;
+margin-right: auto;
+margin-bottom: 0;
+margin-left: auto;
+width:320px;
+}
+
+
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+/* Styles */
+.box{
+  margin-top: 0;
+margin-right: auto;
+margin-bottom: 0;
+margin-left: auto;
+width:661px;
+}
+.footer-box{
+  margin-top: 0;
+margin-right: auto;
+margin-bottom: 0;
+margin-left: auto;
+width:661px;
+}
+
+
+
+}
+
+
+/* Desktops and laptops ----------- */
+@media (min-width: 1025px) {
+/* Styles */
+.box{
+  margin-top: 0;
+margin-right: auto;
+margin-bottom: 0;
+margin-left: auto;
+width:1004px;
+
+}
+
+.footer-box{
+  margin-top: 0;
+margin-right: auto;
+margin-bottom: 0;
+margin-left: auto;
+width:661px;
+
+}
+
+}
+/* footer style begins */
+
+
+
+
+
+.stampcopy {
+  position: absolute;
+  left: 18.8482%;
+  top: 188px;
+  height: 12px;
+}
+
+.stamp-Google-Partner-Badge {
+  left: 0;
+  top: 0;
+
+  background-image: url('/images/PartnerBadge-151030.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 92px !important;
+  width: 167;
+  height: 38;
+}
+.stamp-NodeJS{
+  left: 0;
+  top: 0;
+
+  background-image: url('/images/NodeJS.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+    height: 38;
+}
+
+.stamp-ReactJS{
+  left: 0;
+  top: 0;
+
+  background-image: url('/images/ReactJs.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+    height: 38;
+}
+.stamp-Ruby-on-rails{
+  left: 0;
+  top: 0;
+    background-image: url('/images/ruby-on-rails.png');
+
+  background-repeat: no-repeat;
+  background-position: center center;
+    height: 38;
+}
+.stamp-Ruby{
+  left: 0;
+  top: 0;
+
+    background-image: url('/images/ruby.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+    height: 38;
+}
+
+
+.grid-item-footer-content {
+
+  padding-bottom: 40px;
+}
+
+.grid-item--foot {
+
+  box-shadow: 0 2px 10px;
+  padding-bottom: 40px;
+
+}
+
+/* end of footer style */

@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'nokogiri'
 
 gem "middleman-syntax"
+
 # For faster file watcher updates on Windows:
 gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 
@@ -21,5 +22,17 @@ gem "middleman-deploy", "~> 2.0.0-alpha"
 
 gem 'redcarpet'
 
+
 # For feed.xml.builder
 gem "builder"
+
+
+# Middleman Gems
+
+gem "middleman-meta-tags",
+  :git => "https://github.com/rossta/middleman-meta-tags"
+
+gem "middleman-sprockets", "~> 4.0.0.rc"
+gem "middleman-disqus"
+gem "middleman-google-analytics", "~> 2.1"
+gem "middleman-gh-pages"

@@ -27,6 +27,8 @@ $flower: #353866;
 
 // button styles
 .button {
+  pointer-events: all !important;
+  position: relative !important;
   border: 0 none;
   border-radius: 0px;
 

@@ -4,20 +4,17 @@
         <meta charset="utf-8" />
         <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Khalil Gharbaoui<%= ' | ' + current_article.title unless current_article.nil? %></title>
+        <title>Khalil Gharbaoui<%= " | " + current_article.title unless current_article.nil? %></title>
         <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
         <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="https://npmcdn.com/packery@2.0/dist/packery.pkgd.min.js"></script>
-        <script src="https://npmcdn.com/draggabilly@2.1/dist/draggabilly.pkgd.min.js"></script>
+        <!-- <script src="https://npmcdn.com/draggabilly@2.1/dist/draggabilly.pkgd.min.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
         <script src="https://cdn.jsdelivr.net/jquery.infinitescroll/2.1.0/jquery.infinitescroll.min.js"></script>
-          <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
-
-
-
-        <%= stylesheet_link_tag :site %>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
+        <%= stylesheet_link_tag :site, :syntax %>
         <%= javascript_include_tag :all %>
-      </head>
-<body>
-  <canvas id="c"></canvas>
+  </head>
+      <body>
+        <canvas id="c"></canvas>

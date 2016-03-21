@@ -1,9 +1,9 @@
 <div id="main" role="main">
   <%= partial 'partials/head' %>
-
-      <%= yield %>
-
-      
-      <%= partial 'partial/aside' =%>
-  <%= partial 'partials/foot' %>
+  <div class="box">
+    <%= yield %>
   </div>
+
+      <%= partial 'partials/footer' %>
+  <%= partial 'partials/foot' %>
+</div>
