@@ -70,11 +70,12 @@ per_page: 3
     <% page_articles.each_with_index do |article, i| %>
     <div class="grid-item" id="loopitem">
       <div class="grid-item-content">
-        <h2><%= link_to article.title, article %></h2>
-        <%= article.date.strftime('%b %e') %>
+        <!-- <h2><%= link_to article.title, article %></h2> -->
+        <%= article.date.strftime('%e %b %Y') %>
         <!-- use article.summary(250) if you have Nokogiri available to show just
        the first 250 characters -->
-        <%= article.summary(250) %>
+       <%= article.summary(255) %>
+       <p><%= link_to "➜ Read more...", article %></p>
       </div>
     </div>
     <% end %>
@@ -91,7 +92,7 @@ per_page: 3
   <p><%= link_to 'Previous page', prev_page %></p>
   <% end %>
   <% end %>
-  
+
   <% if paginate %>
   <% if next_page %>
   <center class="buttonfix">

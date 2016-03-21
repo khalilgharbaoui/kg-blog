@@ -5,20 +5,20 @@ tags: Ruby, PHP
 class: blogpost
 ---
 
-##In To The Code!
+#In To The Code!
 <img src="/images/codeacademy-ruby.png" />
 
-<p>There i was, learning PHP in a DIY way..., I figured if half the web uses "WordPress" the PHP based platform, it might be the language that needs the most attention.</p>
+<p>There i was, learning PHP, I figured if half the web uses "WordPress" the PHP based platform, it might be the language that needs the most attention.</p>
 
 <p>Looking back i'm so happy i was wrong about that one!!</p>
 
 <p>In the first days of January 2016 a friend of mine told me about a development bootcamp in Amsterdam called Codaisseur, where they teach people to code, "It will only take about 5 to 7 weeks time and you will be able to code" he said. On top of that they would help me with getting a job as a Junior Developer, guide me during the job for 2 years until i reach a senior level.</p>
-<p>At first it sounded to good to be true, I waited about 2 weeks, then i had to check it out, i send out an e-mail stating that i wanted to participate in the traineeship program.</p>
+<p>It sounded really good, but i waited about 2 weeks, then i had to check it out, i send out an e-mail stating that i wanted to participate in the traineeship program.</p>
 
-<p>Mr. W. de Vos of Codaisseur, told me there was only one spot still open and that if i wanted to participate i should at least be able to do the entire Ruby course on Codeacademy website in 48 hours to get a feeling of the intensity of the bootcamp, also because time was critical i did not have much time, the first traineeship would already start in 3 days, i only had about 24 hours left to do it, all i had was some basic php knowledge😳, non the less i didn't give up, now or never!</p>
+<p>Mr. W. de Vos of Codaisseur, told me there was only one spot still open and that if i wanted to participate i should at least be able to do the entire Ruby course on the Code Academy website in 48 hours to get a feeling of the intensity of the bootcamp, the first traineeship would already start in 2 days, i only had about 24 hours left to do it😳, non the less i didn't give up, it was now or never!</p>
 
 <p>I huffed and puffed and stayed up all night, pulled it off and sent him the result in the morning.<br />
-Next Stop Codaisseur Amsterdam 😁</p>
+Next Stop Codaisseur Amsterdam! 😁</p>
 <br />
 <br />
 <p>Even tough the concepts are quite similar, PHP is a such a pain in the $@## 😏, compared to the friendly-ness and readability of Ruby. </p>
