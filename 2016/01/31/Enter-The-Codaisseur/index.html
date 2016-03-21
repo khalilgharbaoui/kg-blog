@@ -1,0 +1,334 @@
+<div id="main" role="main">
+    <!doctype html>
+    <html>
+      <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Khalil Gharbaoui | Enter The Codaisseur!</title>
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="https://npmcdn.com/packery@2.0/dist/packery.pkgd.min.js"></script>
+        <!-- <script src="https://npmcdn.com/draggabilly@2.1/dist/draggabilly.pkgd.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.infinitescroll/2.1.0/jquery.infinitescroll.min.js"></script>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
+        <link href="../../../../stylesheets/site.css" rel="stylesheet" /><link href="../../../../stylesheets/syntax.css" rel="stylesheet" />
+        <script src="../../../../javascripts/all.js"></script>
+  </head>
+      <body>
+        <canvas id="c"></canvas>
+
+  <div class="box">
+    <h2>Enter The Codaisseur!</h2>
+<div class="highlight ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="p">.</span><span class="nf">include?</span> <span class="c1">#Ruby♡</span>
+</pre></td></tr></tbody></table>
+</div>
+
+<p>In the 1st week of my traineeship at Codaisseur, I&rsquo;ve had an introduction to programming followed by HTML/CSS, Even tough i knew the basics of HTML and CSS it was nice to see everything from a developers point-of-view, also using Atom, Github&rsquo;s open-source editor instead of Dreamweaver was a positive twist.</p>
+
+<p>Shortly after that we went strait to Ruby♡. What i liked most about the Ruby language is that it&rsquo;s almost readable in english. once i understood the basics and rules, it was quite clear and made a lot of sense, there was not much need for brackets and semi-colons.</p>
+
+<p>The following code was my first snippet in Ruby, it&rsquo;s a little game that runs in the terminal. It&rsquo;s messy but it makes sense, at least for to me it does 😋.</p>
+
+<p>You can choose a random number between 0 and 100, it will respond based on your choice. you only have 10 tries.</p>
+
+<p>source:</p>
+<div class="highlight ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre></td><td class="code"><pre><span class="c1">#----- Question Starts Here ------------</span>
+<span class="nb">puts</span> <span class="s2">"Try to guess my secret number (between 0 and 100) in 10 Tries!"</span>
+<span class="c1">#------ Question ENDS Here ------------</span>
+
+<span class="c1">#Secret Number "Variable" is defined here outside of the methode / function</span>
+<span class="n">secret_number</span> <span class="o">=</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#random number between 0 and 100</span>
+<span class="n">number_of_tries</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="c1">#---- isolated funtion / methode STARTS HERE --------</span>
+<span class="c1">#def = define... guess = the methode / function...</span>
+<span class="c1">#(secret_number = argument 1, number_of_tries = argument 2)</span>
+<span class="k">def</span> <span class="nf">guess</span><span class="p">(</span><span class="n">secret_number</span><span class="p">,</span> <span class="n">number_of_tries</span><span class="p">)</span>
+
+    <span class="nb">puts</span> <span class="s2">"Try </span><span class="si">#{</span><span class="n">number_of_tries</span><span class="si">}</span><span class="s2">: "</span> <span class="c1">#Show the number_of_tries</span>
+  <span class="n">user_input</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">to_i</span> <span class="c1">#get the user input and covert it to intenger a.k.a. number....</span>
+
+<span class="k">if</span> <span class="n">user_input</span> <span class="o">==</span> <span class="n">secret_number</span> <span class="c1"># end the game if found</span>
+<span class="nb">puts</span> <span class="s2">"You guessed it! with </span><span class="si">#{}</span><span class="s2"> left!"</span>
+<span class="k">return</span>
+<span class="k">end</span>
+<span class="k">if</span> <span class="n">user_input</span> <span class="o">&gt;</span> <span class="n">secret_number</span> <span class="c1"># speaks for itself :P</span>
+    <span class="nb">puts</span> <span class="s2">"Lower!"</span>
+  <span class="k">elsif</span> <span class="n">number_of_tries</span> <span class="o">==</span> <span class="mi">10</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1"># if there are 10 number_of_tries</span>
+    <span class="nb">puts</span> <span class="s2">"You failed!!</span><span class="se">\n</span><span class="s2"> The number you were lookin for is: </span><span class="si">#{</span><span class="n">secret_number</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">return</span> <span class="c1"># end the game if not found</span>
+<span class="k">else</span> <span class="n">user_input</span> <span class="o">&lt;</span> <span class="n">secret_number</span> <span class="c1"># speaks for itself :P</span>
+    <span class="nb">puts</span> <span class="s2">"Higher!"</span>
+  <span class="k">end</span>
+  <span class="c1"># Add 1 number to the number_of_tries each time the "methode / function" runs</span>
+  <span class="n">guess</span><span class="p">(</span><span class="n">secret_number</span><span class="p">,</span> <span class="n">number_of_tries</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">end</span>
+<span class="c1">#---- isolated funtion / methode ENDS HERE ---------</span>
+
+<span class="c1">#------ The Final Call that Calls or "Activates" the methode or function !!!</span>
+<span class="n">guess</span><span class="p">(</span><span class="n">secret_number</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+
+<p>After saving this game, I learned about the Git, created a Github repository and uploaded my work with the following commands:</p>
+<div class="highlight plaintext"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre>git add .
+
+git commit -m "guessing game in Ruby terminal"
+
+git push
+</pre></td></tr></tbody></table>
+</div>
+
+<h2>Multiple choices</h2>
+
+<p>In ruby multiple choices can simply be checked by adding a function with a question mark to the end of whatever it should check, like for example in the multiple choice fruit store code below:</p>
+<div class="highlight ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="p">.</span><span class="nf">include?</span>
+</pre></td></tr></tbody></table>
+</div>
+
+<p>look arround line 52</p>
+<div class="highlight ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</pre></td><td class="code"><pre><span class="k">class</span> <span class="nc">Item</span>
+  <span class="kp">attr_accessor</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:price</span><span class="p">,</span> <span class="ss">:choice</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">Fruit</span> <span class="o">&lt;</span> <span class="no">Item</span>
+
+<span class="k">end</span>
+
+
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">banana</span> <span class="o">=</span> <span class="no">Fruit</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">banana</span><span class="p">.</span><span class="nf">name</span> <span class="o">=</span> <span class="s2">"banana"</span>
+<span class="n">banana</span><span class="p">.</span><span class="nf">price</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">banana</span><span class="p">.</span><span class="nf">choice</span> <span class="o">=</span> <span class="ss">:a</span>
+<span class="n">fruits</span> <span class="o">&lt;&lt;</span> <span class="n">banana</span>
+
+<span class="n">apple</span> <span class="o">=</span> <span class="no">Fruit</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">apple</span><span class="p">.</span><span class="nf">name</span> <span class="o">=</span> <span class="s2">"Apple"</span>
+<span class="n">apple</span><span class="p">.</span><span class="nf">price</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">apple</span><span class="p">.</span><span class="nf">choice</span> <span class="o">=</span> <span class="ss">:b</span>
+<span class="n">fruits</span> <span class="o">&lt;&lt;</span> <span class="n">apple</span>
+
+
+<span class="n">lemon</span> <span class="o">=</span> <span class="no">Fruit</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">lemon</span><span class="p">.</span><span class="nf">name</span> <span class="o">=</span> <span class="s2">"Lemon"</span>
+<span class="n">lemon</span><span class="p">.</span><span class="nf">price</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">lemon</span><span class="p">.</span><span class="nf">choice</span> <span class="o">=</span> <span class="ss">:c</span>
+<span class="n">fruits</span> <span class="o">&lt;&lt;</span> <span class="n">lemon</span>
+<span class="c1">#fruits[:a] = banana this is how to input it inide hashes</span>
+
+<span class="n">ordered</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># methode starts HERE</span>
+<span class="k">def</span> <span class="nf">chooseFruits</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span> <span class="n">ordered</span><span class="p">)</span>
+  <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="n">fruits</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">fruit</span><span class="o">|</span>
+    <span class="nb">puts</span> <span class="s2">"</span><span class="si">#{</span><span class="n">index</span><span class="si">}</span><span class="s2">: </span><span class="si">#{</span><span class="n">fruit</span><span class="p">.</span><span class="nf">name</span><span class="si">}</span><span class="s2">, Price: $</span><span class="si">#{</span><span class="n">fruit</span><span class="p">.</span><span class="nf">price</span><span class="si">}</span><span class="s2">"</span><span class="p">.</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:green</span><span class="p">)</span>
+    <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+  <span class="k">end</span>
+
+  <span class="c1">#puts "choose one:[#{fruits.keys.join(', ')}]"  with hashes</span>
+<span class="nb">puts</span> <span class="s2">"choose one:"</span>
+  <span class="n">fruits</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">fruit</span><span class="o">|</span>
+    <span class="nb">print</span> <span class="s2">"</span><span class="si">#{</span><span class="n">fruit</span><span class="p">.</span><span class="nf">choice</span><span class="si">}</span><span class="s2"> ,"</span><span class="p">.</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:green</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="c1"># get user input, convert it to uppercase, convert it to symbol</span>
+  <span class="n">choice</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">upcase</span><span class="p">.</span><span class="nf">to_i</span>
+
+  <span class="c1"># is the choice of the user included in "keys" of the "hash" in this case fruits</span>
+  <span class="n">fruits</span><span class="p">.</span><span class="nf">include?</span> <span class="n">choice</span>
+  <span class="nb">puts</span> <span class="s2">"You chose: </span><span class="si">#{</span><span class="n">fruits</span><span class="p">[</span><span class="n">choice</span><span class="p">].</span><span class="nf">choice</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">fruits</span><span class="p">[</span><span class="n">choice</span><span class="p">].</span><span class="nf">name</span><span class="si">}</span><span class="s2">"</span>
+
+  <span class="c1"># add each choice to the array "ordered"</span>
+  <span class="n">ordered</span> <span class="o">&lt;&lt;</span> <span class="n">choice</span>
+
+  <span class="nb">puts</span> <span class="s1">'So far you ordered:'</span>
+
+  <span class="n">ordered</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">index</span><span class="o">|</span>
+    <span class="n">fruit</span> <span class="o">=</span> <span class="n">fruits</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+    <span class="nb">puts</span> <span class="s2">"• </span><span class="si">#{</span><span class="n">fruit</span><span class="p">.</span><span class="nf">name</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">fruit</span><span class="p">.</span><span class="nf">price</span><span class="si">}</span><span class="s2">"</span><span class="p">.</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:blue</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="c1"># methode is called HERE</span>
+  <span class="n">chooseFruits</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span> <span class="n">ordered</span><span class="p">)</span>
+<span class="k">end</span>
+<span class="c1"># methode ends HERE</span>
+<span class="c1"># methode is "Activated here" a.k.a. called HERE</span>
+<span class="n">chooseFruits</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span> <span class="n">ordered</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+
+  </div>
+
+      <footer class="footer-box">
+<div align="center">
+<div class="grid">
+  <div class="grid-item grid-item--achievments stamp stamp-NodeJS">
+        <a>  <div class="grid-item-content"></div></a>
+      </div>
+      <div class="grid-item grid-item--achievments stamp stamp-ReactJS">
+          <a>  <div class="grid-item-content"></div></a>
+      </div>
+      <div class="grid-item grid-item--achievments stamp stamp-Ruby">
+          <a>  <div class="grid-item-content"></div></a>
+      </div>
+      <div class="grid-item grid-item--achievments stamp stamp-Ruby-on-rails">
+        <a><div class="grid-item-content"></div></a>
+      </div>
+      <div class="grid-item grid-item--achievments stamp stamp-Google-Partner-Badge">
+        <a href="https://www.google.com/partners/?hl=en-GB#a_profile;idtf=7256334643;" target="_blank"><div class="grid-item-content"></div></a>
+      </div>
+
+  </div>
+    <br/>
+    <!-- footer grid -->
+    <div class="grid">
+      <div class="grid-item grid-item--foot">
+        <div class="grid-item-footer-content">
+          <h2>Tags</h2>
+          <ul id="cloud">
+            <li><a class="tag2" href="/tags/ruby/">Ruby (2)</a></li>
+            <li><a class="tag1" href="/tags/php/">PHP (1)</a></li>
+            <li><a class="tag1" href="/tags/html/">HTML (1)</a></li>
+            <li><a class="tag1" href="/tags/css/">CSS (1)</a></li>
+            <li><a class="tag1" href="/tags/git/">Git (1)</a></li>
+            <li><a class="tag1" href="/tags/github/">Github (1)</a></li>
+            <li><a class="tag1" href="/tags/terminal/">Terminal (1)</a></li>
+            <li><a class="tag1" href="/tags/irb/">IRB (1)</a></li>
+            <!-- ARRARNAME.each_with_object(Hash.new(0)) { |tag, count| count[tag] += 1 } -->
+          </ul>
+        </div>
+      </div>
+      <div class="grid-item grid-item--foot">
+        <div class="grid-item-footer-content">
+          <h2>By Year</h2>
+          <ul id="cloud">
+            <li><a href="/2016/">2016 (2)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid-item stamp stampcopy">
+        <div class="grid-item-content">
+          <p style="margin-top: -6.5;">©2016 Khalil Gharbaoui</p>
+        </div>
+      </div>
+    </div>
+    <br />
+</div>
+</footer>
+
+  </body>
+</html>
+
+</div>

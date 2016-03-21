@@ -1,0 +1,413 @@
+<div id="main" role="main">
+    <!doctype html>
+    <html>
+      <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Khalil Gharbaoui</title>
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="https://npmcdn.com/packery@2.0/dist/packery.pkgd.min.js"></script>
+        <!-- <script src="https://npmcdn.com/draggabilly@2.1/dist/draggabilly.pkgd.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.infinitescroll/2.1.0/jquery.infinitescroll.min.js"></script>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
+        <link href="../../stylesheets/site.css" rel="stylesheet" /><link href="../../stylesheets/syntax.css" rel="stylesheet" />
+        <script src="../../javascripts/all.js"></script>
+  </head>
+      <body>
+        <canvas id="c"></canvas>
+
+  <div class="box">
+    <style>
+body {
+  margin: 0;
+  padding: 0;
+  background: #60d7a9!important;
+  transition: 2000ms ease-in;
+
+  color: rgb(50,50,50);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 112.5%;
+  line-height: 1.6em;
+}
+
+/* ================ The Timeline ================ */
+
+.timeline {
+  position: relative;
+  width: 660px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 1em 0;
+  list-style-type: none;
+  margin-bottom: 30px !important;
+}
+
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  content: ' ';
+  display: block;
+  width: 6px;
+  height: 100%;
+  margin-left: -3px;
+  background: rgb(80,80,80);
+  background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+  background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+
+  z-index: 5;
+}
+
+.timeline li {
+  padding: 1em 0;
+}
+
+.timeline li:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.direction-left {
+  position: relative;
+  width: 300px;
+  float: left;
+  text-align: right;
+}
+
+.direction-right {
+  position: relative;
+  width: 300px;
+  float: right;
+}
+
+.flag-wrapper {
+  position: relative;
+  display: inline-block;
+
+  text-align: center;
+}
+
+.flag {
+  position: relative;
+  display: inline;
+  background: rgb(248,248,248);
+  padding: 6px 10px;
+  border-radius: 5px;
+
+  font-weight: 600;
+  text-align: left;
+}
+
+.direction-left .flag {
+  -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+}
+
+.direction-right .flag {
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+}
+
+.direction-left .flag:before,
+.direction-right .flag:before {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  content: ' ';
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-top: -10px;
+  background: #fff;
+  border-radius: 10px;
+  border: 4px solid rgb(255,80,80);
+  z-index: 10;
+}
+
+.direction-right .flag:before {
+  left: -40px;
+}
+
+.direction-left .flag:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-left-color: rgb(248,248,248);
+  border-width: 8px;
+}
+
+.direction-right .flag:after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-right-color: rgb(248,248,248);
+  border-width: 8px;
+}
+
+.time-wrapper {
+  display: inline;
+
+  line-height: 1em;
+  font-size: 0.66666em;
+  color: rgb(250,80,80);
+  vertical-align: middle;
+}
+
+.direction-left .time-wrapper {
+  float: left;
+}
+
+.direction-right .time-wrapper {
+  float: right;
+}
+
+.time {
+  display: inline-block;
+  padding: 4px 6px;
+  background: rgb(248,248,248);
+}
+
+.desc {
+  margin: 1em 0.75em 0 0;
+
+  font-size: 0.77777em;
+  font-style: italic;
+  line-height: 1.5em;
+}
+
+.direction-right .desc {
+  margin: 1em 0 0 0.75em;
+}
+
+/* ================ Timeline Media Queries ================ */
+
+@media screen and (max-width: 660px) {
+
+.timeline {
+ 	width: 100%;
+	padding: 4em 0 1em 0;
+}
+
+.timeline li {
+	padding: 2em 0;
+}
+
+.direction-left,
+.direction-right {
+	float: none;
+	width: 100%;
+
+	text-align: center;
+}
+
+.flag-wrapper {
+	text-align: center;
+}
+
+.flag {
+	background: rgb(255,255,255);
+	z-index: 15;
+}
+
+.direction-left .flag:before,
+.direction-right .flag:before {
+  position: absolute;
+  top: -30px;
+	left: 50%;
+	content: ' ';
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin-left: -9px;
+	background: #fff;
+	border-radius: 10px;
+	border: 4px solid rgb(255,80,80);
+	z-index: 10;
+}
+
+.direction-left .flag:after,
+.direction-right .flag:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: -8px;
+	height: 0;
+	width: 0;
+	margin-left: -8px;
+	border: solid transparent;
+	border-bottom-color: rgb(255,255,255);
+	border-width: 8px;
+}
+
+.time-wrapper {
+	display: block;
+	position: relative;
+	margin: 4px 0 0 0;
+	z-index: 14;
+}
+
+.direction-left .time-wrapper {
+	float: none;
+}
+
+.direction-right .time-wrapper {
+	float: none;
+}
+
+.desc {
+	position: relative;
+	margin: 1em 0 0 0;
+	padding: 1em;
+	background: rgb(245,245,245);
+	-webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+	-moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+	box-shadow: 0 0 1px rgba(0,0,0,0.20);
+
+  z-index: 15;
+}
+
+.direction-left .desc,
+.direction-right .desc {
+	position: relative;
+	margin: 1em 1em 0 1em;
+	padding: 1em;
+
+  z-index: 15;
+}
+
+}
+
+@media screen and (min-width: 400px ?? max-width: 660px) {
+
+.direction-left .desc,
+.direction-right .desc {
+	margin: 1em 4em 0 4em;
+}
+
+}
+.box {
+   background: none !important;
+   padding: 0px !important;
+   box-shadow: 0 0px 0px !important;
+   z-index: 0 !important;
+     position:inherit;
+     margin-bottom: auto !important;
+     pointer-events: none;
+}
+
+</style>
+<br />
+<br />
+<center><h1>Articles tagged 'Github'</h1></center>
+
+
+<ul class="timeline">
+  <li>
+      <div class="direction-left">
+        <div class="flag-wrapper">
+  				<span class="flag"><a href="../../2016/01/31/Enter-The-Codaisseur/">Enter The Codaisseur!</a></span>
+          <span class="time-wrapper"><span class="time">31 January 2016</span></span>
+        </div>
+        <div class="desc"><h2>Enter The Codaisseur!</h2>
+<div class="highlight ruby">
+<table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
+<td class="code"><pre><span class="p">.</span><span class="nf">include?</span> <span class="c1">#Ruby♡</span>
+</pre></td>
+</tr></tbody></table>
+</div>
+
+<p>In the 1st week of my traineeship at Codaisseur...</p></div>
+      </div>
+  </li>
+</ul>
+
+<br />
+
+  </div>
+
+      <footer class="footer-box">
+<div align="center">
+<div class="grid">
+  <div class="grid-item grid-item--achievments stamp stamp-NodeJS">
+        <a>  <div class="grid-item-content"></div></a>
+      </div>
+      <div class="grid-item grid-item--achievments stamp stamp-ReactJS">
+          <a>  <div class="grid-item-content"></div></a>
+      </div>
+      <div class="grid-item grid-item--achievments stamp stamp-Ruby">
+          <a>  <div class="grid-item-content"></div></a>
+      </div>
+      <div class="grid-item grid-item--achievments stamp stamp-Ruby-on-rails">
+        <a><div class="grid-item-content"></div></a>
+      </div>
+      <div class="grid-item grid-item--achievments stamp stamp-Google-Partner-Badge">
+        <a href="https://www.google.com/partners/?hl=en-GB#a_profile;idtf=7256334643;" target="_blank"><div class="grid-item-content"></div></a>
+      </div>
+
+  </div>
+    <br/>
+    <!-- footer grid -->
+    <div class="grid">
+      <div class="grid-item grid-item--foot">
+        <div class="grid-item-footer-content">
+          <h2>Tags</h2>
+          <ul id="cloud">
+            <li><a class="tag2" href="/tags/ruby/">Ruby (2)</a></li>
+            <li><a class="tag1" href="/tags/php/">PHP (1)</a></li>
+            <li><a class="tag1" href="/tags/html/">HTML (1)</a></li>
+            <li><a class="tag1" href="/tags/css/">CSS (1)</a></li>
+            <li><a class="tag1" href="/tags/git/">Git (1)</a></li>
+            <li><a class="tag1" href="/tags/github/">Github (1)</a></li>
+            <li><a class="tag1" href="/tags/terminal/">Terminal (1)</a></li>
+            <li><a class="tag1" href="/tags/irb/">IRB (1)</a></li>
+            <!-- ARRARNAME.each_with_object(Hash.new(0)) { |tag, count| count[tag] += 1 } -->
+          </ul>
+        </div>
+      </div>
+      <div class="grid-item grid-item--foot">
+        <div class="grid-item-footer-content">
+          <h2>By Year</h2>
+          <ul id="cloud">
+            <li><a href="/2016/">2016 (2)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid-item stamp stampcopy">
+        <div class="grid-item-content">
+          <p style="margin-top: -6.5;">©2016 Khalil Gharbaoui</p>
+        </div>
+      </div>
+    </div>
+    <br />
+</div>
+</footer>
+
+  </body>
+</html>
+
+</div>
