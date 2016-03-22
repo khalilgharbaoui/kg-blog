@@ -1,3 +1,4 @@
+require_relative "./lib/build_cleaner"
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -19,6 +20,11 @@ page '/*.txt', layout: false
 ###
 # Helpers
 ###
+
+
+configure :build do
+  activate :build_cleaner
+end
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
@@ -94,8 +100,9 @@ configure :build do
 end
 
 
-# activate :deploy do |deploy|
-#   deploy.deploy_method = :git
-#   deploy.branch = 'master'
-#   deploy.build_before = true
-# end
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.branch = 'master'
+  deploy.build_before = true
+  deploy.remote   = 'https://github.com/khalilgharbaoui/khalilgharbaoui.github.io.git'
+end

@@ -1,7 +1,7 @@
 ---
 title: Enter The Codaisseur!
 date: 2016-01-31
-tags: Ruby, HTML, CSS, Git, Github, Terminal, IRB
+tags: Ruby, Ruby, Ruby, Ruby, HTML, CSS, HTML, CSS, Git, Github, Terminal, IRB
 class: blogpost
 ---
 
