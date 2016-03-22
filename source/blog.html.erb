@@ -67,11 +67,12 @@ per_page: 3
     </div>
 
     <!-- <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'> -->
-    <% page_articles.each_with_index do |article, i| %>
+    <% page_articles.reverse_each.with_index do |article, i| %>
     <div class="grid-item" id="loopitem">
       <div class="grid-item-content">
         <!-- <h2><%= link_to article.title, article %></h2> -->
         <%= article.date.strftime('%e %b %Y') %>
+        <%= i %>
         <!-- use article.summary(250) if you have Nokogiri available to show just
        the first 250 characters -->
        <%= article.summary(255) %>
