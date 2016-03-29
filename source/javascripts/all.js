@@ -8,7 +8,8 @@ $(document).ready(function() {
     itemSelector: '.grid-item',
     gutter: 20,
     percentPosition: true,
-    transitionDuration: '0.5s'
+    transitionDuration: '0.5s',
+    initLayout: false
 
   });
 
@@ -18,8 +19,20 @@ $(document).ready(function() {
     itemSelector: '#loopitem',
     gutter: 20,
     percentPosition: true,
-    transitionDuration: '0.5s'
+    transitionDuration: '0.5s',
+      initLayout: false
   });
+
+
+  // bind event
+$grid.packery( 'on', 'layoutComplete', function() {
+  console.log('layout is complete');
+  $grid.packery();
+});
+
+
+
+
 
   var $stamp = $grid.find('.stamp');
   var isStamped = false;
@@ -126,7 +139,7 @@ $grid.infinitescroll({
   // $grid.packery( 'bindDraggabillyEvents', draggie );
   // }
 });
- $grid.packery('layout');
+
 function fire() {
 
   setInterval(function() {

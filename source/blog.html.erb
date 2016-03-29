@@ -136,12 +136,13 @@ per_page: 3
 
       <% if paginate %>
       <% if next_page %>
-      <center class="buttonfix">
+      <div class="buttonfix">
         <button class="button -green blogbutton" onclick="resumeInfiniteScroll(event)">Show more posts</button>
 
         <div class="navi" style="pointer-events: all;"><%= link_to '', next_page, class: "nextpage" %></div>
         <% end %>
         <% end %>
-      </center>
+      </div>
+    </center>
 
     </div>
