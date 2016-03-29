@@ -94,7 +94,7 @@ $grid.infinitescroll({
     debug: false,
     // enable debug messaging ( to console.log )
     animate: true,
-    extraScrollPx: 300,
+    extraScrollPx: 350,
     localMode: false
 
 
