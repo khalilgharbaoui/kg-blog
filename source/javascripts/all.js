@@ -126,7 +126,7 @@ $grid.infinitescroll({
   // $grid.packery( 'bindDraggabillyEvents', draggie );
   // }
 });
-
+ $grid.packery('layout');
 function fire() {
 
   setInterval(function() {
