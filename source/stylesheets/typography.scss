@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900);
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:900);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,300,500,600,700,900);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,300,500,600,700,900);
 
 
 
@@ -24,7 +24,7 @@ html {
 
 
 body {
-   padding: 50px 0;
+
    font-size: 15px;
    font-family: "Source Code Pro";
    font-style: normal;
@@ -46,7 +46,64 @@ a:hover{
    text-decoration: underline;
 }
 
+header{width: 100%;
+height: 50px;
+margin-bottom: 30px;
+position: initial;
+// background-color: rgba(38, 38, 38, 1);
+// box-shadow: 0px 2px 4px;
+padding: 3px;
+text-align: right;
+text-decoration: blink;
+ position: fixed;
+ z-index: 111;
+     top: 0;
 
+}
+header.sticky{background-color: rgba(38, 38, 38, 1);
+box-shadow: 0px 2px 4px;
+
+transition: all 0.4s ease;
+}
+
+header > span {
+    color: #fff;
+    margin-right: 15px;
+    vertical-align: middle;
+   //  box-shadow: 0px 2px 4px black;
+    display: inline-flex;
+    padding: 12px;
+    margin-top: 3.5px;
+    text-shadow: 1px 2px 1px black;
+   //  background-color: rgba(38, 38, 38, 1);
+   font-size: 15px !important;
+}
+header > span.logo{float:left; margin-left: 15px; background: url('/images/Khalil-Gharbaoui-codez-it-320x320.png')center;
+   background-size: 52px auto;
+     background-repeat: no-repeat;
+  z-index: 999999;}
+  header > span.logo a{opacity: 0;cursor:w-resize;height:26px;width: 26px;top:0;left:0;}
+
+
+
+header > span:hover {
+    color: #fff;
+    margin-right: 15px;
+    vertical-align: middle;
+
+    display: inline-flex;
+    padding: 12px;
+    margin-top: 3.5px;
+    text-shadow: 1px 2px 1px black;
+    transition: 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+header a{
+   text-decoration: none !important;
+   color:white;
+}
+
+.toggle-stamp-button:hover{color:rgb(69, 187, 85); pointer-events: all;cursor:help;}
 
 
 

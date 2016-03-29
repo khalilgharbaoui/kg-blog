@@ -1,6 +1,6 @@
 ---
-title: In To The Code!
-date: 2016-01-29
+title: To The Code!
+date: 2016-01-22
 tags: Ruby, PHP
 class: blogpost
 ---
