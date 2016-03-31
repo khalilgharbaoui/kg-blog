@@ -1,4 +1,8 @@
 require_relative "./lib/build_cleaner"
+
+after_configuration do
+  sprockets.append_path File.join root.to_s, "bower_components"
+end
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -22,6 +26,7 @@ page '/*.txt', layout: false
 ###
 
 
+
 configure :build do
   activate :build_cleaner
 end
@@ -30,11 +35,13 @@ activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
 
-  # blog.permalink = "{year}/{month}/{day}/{title}.html"
+  blog.permalink = "{title}"
+
+# blog.permalink = "{year}/{month}/{day}/{title}.html"
   # Matcher for blog source files
   # blog.sources = "{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
-  # blog.layout = "layout"
+  blog.layout = "article_layout"
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   # blog.year_link = "{year}.html"
@@ -92,12 +99,26 @@ end
 
 # Build-specific configuration
 configure :build do
-  # Minify CSS on build
-  # activate :minify_css
+  # For example, change the Compass output style for deployment
+  	activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  	require 'uglifier'
+  	activate :minify_javascript
+  	set :js_compressor, Uglifier.new(:comments => :none)
+
+  # Enable cache buster
+  # activate :asset_hash
+
+
+
+  # Minify HTML on build
+  #  activate :minify_html
+
+  # Or use a different image path
+  # set :http_prefix, "/Content/images/"
 end
+
 
 
 activate :deploy do |deploy|

@@ -5,7 +5,7 @@ tags: Ruby, HTML, CSS, Git, Github, Terminal, IRB
 class: blogpost
 ---
 
-##Enter The Codaisseur!
+#Enter The Codaisseur!
 ```ruby
 .include? #Ruby♡
 ```

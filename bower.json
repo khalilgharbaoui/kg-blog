@@ -1,0 +1,28 @@
+{
+  "name": "kg-blog",
+  "homepage": "http://khalilgharbaoui.github.io",
+  "authors": [
+    "khalilgharbaoui <kaygeee@gmail.com>"
+  ],
+  "description": "i'm kg, this is my blog",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "developer",
+    "blog.",
+    "kg"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2",
+    "packery": "^2.0.0",
+    "imagesloaded": "^4.1.0"
+  }
+}

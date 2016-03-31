@@ -6,24 +6,11 @@ per_page: 3
 
 <style>
 
-  .navi {
-    z-index: 10;
-  }
-
   body {
     background: #0077B5!important;
-    transition: 1500ms ease-in;
-}
-  .grid-item {
-    background-color: #fff!important;
+    /*transition: 1500ms ease-in;*/
   }
-  p {
-    color: #000;
-  }
-  h1,
-  h2 {
-    color: #474747;
-  }
+
   .box {
     background: none !important;
     padding: 0 !important;
@@ -31,15 +18,13 @@ per_page: 3
     z-index: 0 !important;
     position: inherit;
     /*margin-bottom: auto !important;*/
-    pointer-events: none;
+    pointer-events: all;
   }
-
+  
 </style>
-<div id="background" style="background-color:black; height:37%; width:100%;position:absolute;top:0;left:0;">
-</div>
-</div>
+
 <div class="blog box">
-  <div class="grid" id="bloggrid">
+  <div class="grid">
 
     <div class="grid-item--aboutme stamp hidden">
       <div class="grid-item-content">
@@ -73,76 +58,88 @@ per_page: 3
               <span class="cont">+31 6 16 660 264</span>
             </li>
           </ul>
-          <p>After years of web-designing using HTML5/CSS3, WordPress and third-party applications, I decided to rise up to a new challenge: <strong>Web Development, Coding & Developing in multiple languages.</strong> I have always seen my self as a problem solver and I'm very curious in nature especially when it comes to digital things♡.</p>
-          <p><strong>I've attended a solid traineeship and i'm quite good with Ruby and Ruby on Rails, JavaScript and jQuery, AJAX, ReactJS, NodeJS, all kinds of SQL and NoSQL Databases, Testing and afcourse Github + CI.</stong></p>
+          <p>After years of web-designing using HTML5/CSS3, WordPress and third-party applications, I decided to rise up to a new challenge:
+            <strong>Web Development, Coding & Developing in multiple languages.</strong>
+            I have always seen my self as a problem solver and I'm very curious in nature especially when it comes to digital things♡.</p>
+          <p>
+            <strong>I've attended a solid traineeship and i'm quite good with Ruby and Ruby on Rails, JavaScript and jQuery, AJAX, ReactJS, NodeJS, all kinds of SQL and NoSQL Databases, Testing and afcourse Github + CI.</stong>
+          </p>
           <p>Creating tought trough Front-ends or UI/UX, and reliable RESTful APIs or back-ends is what interests me the most.</p>
         </div>
-
-          <p><i>Contact me, see <a href="/my-work">my work</a> or read about my findings and experiences here on my developer blog.</i></p>
+        <p>
+          <strong>I'm currently looking for a job as a Junior Developer!"</strong>
+        </p>
+        <p>
+          <i>Contact me, see
+            <a href="/my-work">my work</a>
+            or read about my findings and experiences here on my developer blog.</i>
+        </p>
       </div>
-
-        <div class="social">
-          <ul>
-              <li>
-                <a href="https://ch.linkedin.com/in/khalilgharbaoui" target="_blank">
-                  <i class="fa fa-linkedin"></i>
-                </a>
-              </li>
-               <li>
-                <a href="https://github.com/khalilgharbaoui" target="_blank">
-                  <i class="fa fa-github"></i>
-                </a>
-              </li>
-            <li>
-                <a href="https://www.google.com/partners/?hl=en-GB#a_profile;idtf=7256334643;" target="_blank">
-                  <i class="fa fa-google"></i>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:khalilgharbaoui@hotmail.com" target="_blank">
-                  <i class="fa fa-envelope-o"></i>
-              </a>
-                </li>
-              </ul>
-            </div>
-        </div>
-<!-- <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'> -->
-      <% page_articles.reverse_each.with_index do |article, i| %>
-      <div class="grid-item" id="loopitem">
-        <div class="grid-item-content">
-          <!-- <h2><%= link_to article.title, article %></h2> -->
-          <div class="blogdate"><%= article.date.strftime('%e %b %Y') %></div>
-
-          <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-          <%= article.summary(255) %>
-          <p><%= link_to "➜ Read more...", article %></p>
-        </div>
+      <div class="social">
+        <ul>
+          <li>
+            <a href="https://ch.linkedin.com/in/khalilgharbaoui" target="_blank">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/khalilgharbaoui" target="_blank">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.google.com/partners/?hl=en-GB#a_profile;idtf=7256334643;" target="_blank">
+              <i class="fa fa-google"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:khalilgharbaoui@hotmail.com" target="_blank">
+              <i class="fa fa-envelope-o"></i>
+            </a>
+          </li>
+        </ul>
       </div>
-      <% end %>
     </div>
-    <br/>
-    <center>
-      <% if paginate && num_pages > 1 %>
-      <!-- <p>Page
+    <% page_articles.reverse_each.with_index do |article, i| %>
+    <div class="grid-item">
+      <div class="blogdate">
+        <h2><%= link_to article.title, article %></h2><%= article.date.strftime('%e %b %Y') %></div>
+
+      <div class="grid-item-content">
+        <!-- <h2><%= link_to article.title, article %></h2> -->
+
+        <!-- use article.summary(250) if you have Nokogiri available to show just
+       the first 250 characters -->
+        <%link_to article do %><%= article.summary(255) %><% end %>
+      </div>
+
+      <%link_to article do %>
+      <div class="article-link">➜ Read more...</div>
+      <% end %>
+
+    </div>
+    <% end %>
+  </div>
+  <br/>
+  <center>
+    <% if paginate && num_pages > 1 %>
+    <!-- <p>Page
   <%= page_number %>
   of
   <%= num_pages %></p> -->
 
-      <% if prev_page %>
-      <p><%= link_to 'Previous page', prev_page %></p>
+    <% if prev_page %>
+    <p><%= link_to 'Previous page', prev_page %></p>
+    <% end %>
+    <% end %>
+
+    <% if paginate %>
+    <% if next_page %>
+    <div class="buttonfix">
+      <button class="button -green blogbutton" onclick="resumeInfiniteScroll(event)">Show more posts</button>
+      <div class="navi" style="pointer-events: all;"><%= link_to '', next_page, class: "nextpage" %></div>
       <% end %>
       <% end %>
-
-      <% if paginate %>
-      <% if next_page %>
-      <div class="buttonfix">
-        <button class="button -green blogbutton" onclick="resumeInfiniteScroll(event)">Show more posts</button>
-
-        <div class="navi" style="pointer-events: all;"><%= link_to '', next_page, class: "nextpage" %></div>
-        <% end %>
-        <% end %>
-      </div>
-    </center>
-
     </div>
+  </center>
+</div>

@@ -5,7 +5,7 @@ tags: Ruby, PHP
 class: blogpost
 ---
 
-##In To The Code!
+#In To The Code!
 <img src="/images/codeacademy-ruby.png" />
 
 <p>There i was, learning PHP, I figured if half the web uses "WordPress" the PHP based platform, it might be the language that needs the most attention.</p>

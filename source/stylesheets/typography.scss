@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,300,500,600,700,900);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,300,500,600,700,900);
+@import url(https://fonts.googleapis.com/css?family=Martel+Sans:900,800&subset=latin,latin-ext);
 
 
 
@@ -60,6 +61,7 @@ text-decoration: blink;
      top: 0;
 
 }
+
 header.sticky{background-color: rgba(38, 38, 38, 1);
 box-shadow: 0px 2px 4px;
 
@@ -78,12 +80,29 @@ header > span {
    //  background-color: rgba(38, 38, 38, 1);
    font-size: 15px !important;
 }
-header > span.logo{float:left; margin-left: 15px; background: url('/images/Khalil-Gharbaoui-codez-it-320x320.png')center;
+header > span.logo{float:left; margin-left: 0px;
    background-size: 52px auto;
      background-repeat: no-repeat;
-  z-index: 999999;}
-  header > span.logo a{opacity: 0;cursor:w-resize;height:26px;width: 26px;top:0;left:0;}
+  z-index: 999999;
+pointer-events: all;}
+  header > span.logo a {
+      opacity: 1;
+      cursor: w-resize;
+      height: 28px;
+      width: 28px;
+      top: 0;
+      left: 0;
+      font-size: 28px;
+      font-weight: bold;
+      font-family: sans-serif;
+      margin-top: -7.5px;
+      pointer-events: all;
+  }
 
+  header > span.logo a:hover {
+      color: #ededed;
+  }
+  
 
 
 header > span:hover {

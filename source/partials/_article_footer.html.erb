@@ -1,0 +1,58 @@
+<div align="center" style="width:100%;">
+        <div style="width: 280px;
+  box-shadow: 0px 6px 10px rgba(8, 8, 8, 0.8);
+  padding: 24px;
+  background-color: #FDFDFD !important; float:right; clear:right;margin:20px auto 100px auto">
+            <div class="grid-item-footer-content">
+              <h2>Tags</h2>
+              <ul id="cloud">
+                <% blog.tags.each do |tag, articles| %>
+                <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag), class: "tag#{articles.size}"  %></li>
+                <% end %>
+                 <!-- ARRAYNAME.each_with_object(Hash.new(0)) { |tag, count| count[tag] += 1 } -->
+              </ul>
+            </div>
+          </div>
+          <div style="width: 280px;
+    box-shadow: 0px 6px 10px rgba(8, 8, 8, 0.8);
+    padding: 24px;
+    background-color: #FDFDFD !important; float:left; clear:left;margin:20px auto 100px auto">
+            <div class="grid-item-footer-content">
+              <h2>By Year</h2>
+              <ul id="cloud">
+                <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+                <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br />
+
+<footer class="footer-box">
+<div class="social-footer">
+    <ul>
+      <li>
+        <a href="https://ch.linkedin.com/in/khalilgharbaoui" target="_blank">
+          <i class="fa fa-linkedin"></i>
+        </a>
+      </li>
+       <li>
+        <a href="https://github.com/khalilgharbaoui" target="_blank">
+          <i class="fa fa-github"></i>
+        </a>
+      </li>
+    <li>
+        <a href="https://www.google.com/partners/?hl=en-GB#a_profile;idtf=7256334643;" target="_blank">
+          <i class="fa fa-google"></i>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:khalilgharbaoui@hotmail.com" target="_blank">
+          <i class="fa fa-envelope-o"></i>
+      </a>
+        </li>
+      </ul>
+      ©2016 Khalil Gharbaoui
+</div>
+</footer>

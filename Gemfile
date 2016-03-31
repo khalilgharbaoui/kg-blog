@@ -16,8 +16,10 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 # Middleman Gems
 gem 'middleman-livereload'
 gem 'middleman-compass', '>= 4.0.0'
-gem "middleman", "~> 4.1.0"
-gem "middleman-blog"
+gem "middleman"
+gem "middleman-blog",
+:git => "https://github.com/middleman/middleman-blog.git"
+
 gem "middleman-deploy", "~> 2.0.0-alpha"
 
 gem 'redcarpet'
@@ -35,4 +37,3 @@ gem "middleman-meta-tags",
 gem "middleman-sprockets", "~> 4.0.0.rc"
 gem "middleman-disqus"
 gem "middleman-google-analytics", "~> 2.1"
-gem "middleman-gh-pages"
