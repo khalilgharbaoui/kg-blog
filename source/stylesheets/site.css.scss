@@ -719,11 +719,12 @@ li {
   }
 
   .welcome .logo {
-      height: 24em;
-      margin-top: 50px;
+      height: 20em;
+      margin-top: -6em;
       pointer-events: all;
-      margin-bottom: 2em;
+      margin-bottom: -1em;
   }
+    h1{font-size: 22px !important;}
 }
 /* Smartphones (portrait) ----------- */
 @media (max-width: 320px) {
@@ -744,11 +745,13 @@ li {
     max-width: 100%;
   }
   .welcome .logo {
-      height: 24em;
-      margin-top: 50px;
+      height: 20em;
+      margin-top: -6em;
       pointer-events: all;
-      margin-bottom: 2em;
+      margin-bottom: -1em;
   }
+    h1{font-size: 22px !important;}
+
 
 
 
