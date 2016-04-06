@@ -472,6 +472,20 @@ img {
 
   height:300px;
 }
+.grid-item-heading h1{color:#fff !important; text-shadow: 0px 4px 0px black;}
+.grid-item-heading{
+
+    text-align: center;
+
+
+
+
+
+margin: 0 auto -50px auto;
+
+width:50%;
+
+}
 .grid-item--achievments {
   width: 53px;
 }
@@ -1041,6 +1055,19 @@ button.flip-it{bottom:0;position: absolute;width:100%; height:50px;border:none; 
   background-image: url('../images/Music-liby-isometric-perspective.png');
   background-size: cover;
 }
+
+#portfolio-5{
+  background-image: url('../images/TheBestOfEveryThingApp.png');
+  background-size: cover;
+}
+
+#portfolio-6{
+  background-image: url('../images/rubber-duck-puzzle.gif');
+  background-size: cover;
+}
+
+
+
 
 
 .flip-it:hover, .flip-it.hover_effect{transform: scale(1.0); transition: linear 300ms;}
