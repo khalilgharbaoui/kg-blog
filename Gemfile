@@ -37,3 +37,4 @@ gem "middleman-meta-tags",
 gem "middleman-sprockets", "~> 4.0.0.rc"
 gem "middleman-disqus"
 gem "middleman-google-analytics", "~> 2.1"
+gem "middleman-minify-html"

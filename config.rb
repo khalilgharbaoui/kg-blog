@@ -108,16 +108,18 @@ configure :build do
   	set :js_compressor, Uglifier.new(:comments => :none)
 
   # Enable cache buster
-  # activate :asset_hash
+  activate :asset_hash
 
 
 
   # Minify HTML on build
-  #  activate :minify_html
+  activate :minify_html
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+activate :gzip
 
 
 
