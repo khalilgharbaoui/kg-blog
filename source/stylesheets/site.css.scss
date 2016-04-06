@@ -1070,12 +1070,12 @@ button.flip-it{bottom:0;position: absolute;width:100%; height:50px;border:none; 
 
 
 
-.flip-it:hover, .flip-it.hover_effect{transform: scale(1.0); transition: linear 300ms;}
-.flipcard-front:hover #overlay,.flip-it.hover_effect #overlay{
-               opacity:1;
-             }
+.flip-it:hover/*, .flip-it.hover_effect */{transform: scale(1.0); transition: linear 300ms;}
+.flipcard-front:hover #overlay/*,.flip-it.hover_effect #overlay*/{
+  opacity:1;
+}
 
-             .hover {
+#overlay {
 -webkit-user-select: none;
 -webkit-touch-callout: none;
 }
@@ -1124,3 +1124,33 @@ button.flip-it{bottom:0;position: absolute;width:100%; height:50px;border:none; 
     display: inline-block;}
 .flipcard-back #portfolio-content h2{font-size:16px!important; color:#000 !important; margin-top: -10px;}
 .flipcard-back #portfolio-content h1{color:#000 !important;}
+
+
+
+
+
+
+
+html.no-touch-device {
+    /* This style will be applied form the beginning, and continue to exist unless the second test shows it's a touch device */
+}
+
+html.prel-touch-device {
+  /* If the preliminary test shows it's a touch device you can use this to apply styles. This will rarely be used in the CSS. But might be handy in the JavaScript early on in the code flow. */
+
+
+    .flip-it #overlay{
+      opacity:0;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+    }
+}
+
+html.touch-device {
+    /* Here you add the styles that only the touch devices should use. Try to avoid it as much as possible. */
+    .flip-it #overlay{
+      opacity:0.9;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+    }
+}

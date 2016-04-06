@@ -220,9 +220,31 @@ $('div.flip-it').click(flipThis);
     $('.social-footer li a').toggleClass('hovered');
   });
 
-  $(document).ready(function() {
-    $('.hover').bind('touchstart touchend', function(e) {
-        e.preventDefault();
-        $(this).toggleClass('hover_effect');
-    });
+
+
+
+
+
+(function() {
+    //I use jQuery for simplicity
+    var preliminaryTouch = false;
+    //Assume all devices are no touch device
+    $('html').addClass('no-touch-device');
+    //Check the user agent string
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        preliminaryTouch = true;
+    }
+
+    if( preliminaryTouch ) {
+        //Do something for touch devices
+      $('html').addClass('prel-touch-device');
+          //  $('.flipcard-front').bind('touchstart touchend', function(e) {
+          //      e.preventDefault();
+          //      $(this).addClass('hover_effect');
+          //  });
+    }
+})();
+
+$(document).on('touchstart', function() {
+    $('html').removeClass('no-touch-device prel-touch-device').addClass('touch-device');
 });
