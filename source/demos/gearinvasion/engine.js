@@ -146,7 +146,7 @@ var SpriteSheet = new function() {
     this.map = spriteData;
     this.image = new Image();
     this.image.onload = callback;
-    this.image.src = '../../../gearinvasion/images/sprites.png';
+    this.image.src = '../../demos/gearinvasion/images/sprites.png';
   };
 
   this.draw = function(ctx,sprite,x,y,frame) {

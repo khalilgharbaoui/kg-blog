@@ -12,9 +12,9 @@ Game.Boot = function(b) {};
 Game.Boot.prototype = {
   preload: function() {
     game.stage.backgroundColor = "#90b6fc";
-    game.load.image("loading", "../../../mariofrogking/images/loading.png");
-    game.load.image("loading2", "../../../mariofrogking/images/loading2.png");
-    game.load.image("orientation", "../../../mariofrogking/images/orientation.png");
+    game.load.image("loading", "../../demos/mariofrogking/images/loading.png");
+    game.load.image("loading2", "../../demos/mariofrogking/images/loading2.png");
+    game.load.image("orientation", "../../demos/mariofrogking/images/orientation.png");
   },
   create: function() {
     if (!this.game.device.desktop) {
@@ -42,16 +42,16 @@ Game.Load.prototype = {
     preloading = game.add.sprite(w / 2, h / 2 + 19, "loading");
     preloading.x -= preloading.width / 2;
     game.load.setPreloadSprite(preloading);
-    game.load.image("title", "../../../mariofrogking/images/title.png");
-    game.load.image("heart", "../../../mariofrogking/images/star.png");
-    game.load.image("star2", "../../../mariofrogking/images/star2.png");
-    game.load.image("spike", "../../../mariofrogking/images/pik.png");
-    game.load.image("wolk", "../../../mariofrogking/images/wolk.png");
-    game.load.image("ground", "../../../mariofrogking/images/grond.png");
+    game.load.image("title", "../../demos/mariofrogking/images/title.png");
+    game.load.image("heart", "../../demos/mariofrogking/images/star.png");
+    game.load.image("star2", "../../demos/mariofrogking/images/star2.png");
+    game.load.image("spike", "../../demos/mariofrogking/images/pik.png");
+    game.load.image("wolk", "../../demos/mariofrogking/images/wolk.png");
+    game.load.image("ground", "../../demos/mariofrogking/images/grond.png");
     game.load.image("platform", "../../../mariofrogking/images/platform.png");
-    game.load.image("mario_zoom", "../../../mariofrogking/images/mario_zoom.png");
-    game.load.spritesheet("mario", "../../../mariofrogking/images/mario.png", 50, 72);
-    game.load.image("line", "../../../mariofrogking/images/line.png");
+    game.load.image("mario_zoom", "../../demos/mariofrogking/images/mario_zoom.png");
+    game.load.spritesheet("mario", "../../demos/mariofrogking/images/mario.png", 50, 72);
+    game.load.image("line", "../../demos/mariofrogking/images/line.png");
   },
   create: function() {
     game.state.start("Menu");
