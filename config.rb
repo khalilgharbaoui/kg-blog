@@ -108,7 +108,7 @@ configure :build do
   	set :js_compressor, Uglifier.new(:comments => :none)
 
   # Enable cache buster
-  activate :asset_hash
+  # activate :asset_hash
 
 
 
