@@ -12,7 +12,7 @@ Game.Boot = function(b) {};
 Game.Boot.prototype = {
   preload: function() {
     game.stage.backgroundColor = "#90b6fc";
-    game.load.image("loading", "../images/loading.png");
+    game.load.image("loading", "mariofrogking/images/loading.png");
     game.load.image("loading2", "../images/loading2.png");
     game.load.image("orientation", "../images/orientation.png");
   },
@@ -42,7 +42,7 @@ Game.Load.prototype = {
     preloading = game.add.sprite(w / 2, h / 2 + 19, "loading");
     preloading.x -= preloading.width / 2;
     game.load.setPreloadSprite(preloading);
-    game.load.image("title", "../../mariofrogking/images/title.png");
+    game.load.image("title", "mariofrogking/images/title.png");
     game.load.image("heart", "../../mariofrogking/images/star.png");
     game.load.image("star2", "../../mariofrogking/images/star2.png");
     game.load.image("spike", "../../mariofrogking/images/pik.png");
