@@ -48,7 +48,7 @@ Game.Load.prototype = {
     game.load.image("spike", "../../demos/mariofrogking/images/pik.png");
     game.load.image("wolk", "../../demos/mariofrogking/images/wolk.png");
     game.load.image("ground", "../../demos/mariofrogking/images/grond.png");
-    game.load.image("platform", "../../../mariofrogking/images/platform.png");
+    game.load.image("platform", "../../demos/mariofrogking/images/platform.png");
     game.load.image("mario_zoom", "../../demos/mariofrogking/images/mario_zoom.png");
     game.load.spritesheet("mario", "../../demos/mariofrogking/images/mario.png", 50, 72);
     game.load.image("line", "../../demos/mariofrogking/images/line.png");
