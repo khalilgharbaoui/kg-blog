@@ -8,23 +8,29 @@ class: blogpost
 #ReactJS Roller Coaster!
 ![ReactJS FluxJS NodeJS GulpJS JavaScript ES6](/images/ReactJS-FluxJS-NodeJS-GulpJS-ES6.png "ReactJS FluxJS NodeJS GulpJS JavaScript ES6")
 
-At first ReactJS felt like riding a roller coaster🌀. But i managed to find solid ground and get into more advanced concepts like Flux.
-I even created my own Flux Boilerplate combining ReactJS with NodeJS, Flux, Gulp and ES6 JavaScript.
+ReactJS was like riding a roller coaster🌀 At first. But i managed to find some solid ground and get into more advanced concepts like Flux.
+
+Today i created my own Flux Boilerplate combining ReactJS with Flux, ES6, NodeJS and Gulp.
 
 <img alt="flux-architecture" src="/images/flux-architecture.png "Flux architecture" style="width:320px !important;"/>
 
 Feel free to check it out: [Flux Boilerplate](https://github.com/khalilgharbaoui/flux-boilerplate "Flux Boilerplate")
 
+##What it finally all came down to is:
+It's all just JavaScript! With files in different places. Callbacks coming and going from one place to the other. Following each step and console logging it... i got the Flux structure down and it all made some sense.
 
 ##Movie Flux
-After a lot of googling i managed to make my first flux project: [Movie Flux](https://github.com/khalilgharbaoui/movie-reactjs-flux)
+So after a lot of googling i managed to make my first flux project:
+
+[Movie Flux](https://github.com/khalilgharbaoui/movie-reactjs-flux)
 
 demo:
+
 [http://movie-flux.netlify.com/](http://movie-flux.netlify.com/)
-(missing pictures omdb API is free but buggy)
 
 ##Gulp!??🤔
-Besides ReactJS and the architecture of Flux, i came across an interesting task runner that uses NodeJS called Gulp.
+
+Besides ReactJS and the architecture of Flux, i came across an interesting task runner that uses NodeJS to make a developer friendly productive environment it's called Gulp and it does not suck😝.
 
 I used Webpack to bundle stuff before, but Gulp is as easy as drinking a cold milkshake on a hot summer day.
 
