@@ -76,7 +76,7 @@ var browserify = require('browserify');
 var babelify = require("babelify");
 // reactify does almost the same as babelify but with more react stuff i guess.
 var reactify = require('reactify');
-// this one is needed by gulp to prevent writing of remporary files
+// this one is needed by gulp to prevent writing of temporary files
 // read this for more info: http://stackoverflow.com/questions/30794356/why-do-i-have-to-use-vinyl-source-stream-with-gulp
 var source = require('vinyl-source-stream');
 // gulp open simply opens the browser window for you with the right url.
