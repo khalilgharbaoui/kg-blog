@@ -25,6 +25,10 @@ page '/*.txt', layout: false
 # Helpers
 ###
 
+set :url_root, 'http://khalilgharbaoui.codez.it'
+
+activate :search_engine_sitemap
+
 
 
 configure :build do
