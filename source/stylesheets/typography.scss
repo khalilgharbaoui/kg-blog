@@ -107,7 +107,7 @@ pointer-events: all;}
 
 header > span:hover {
     color: #fff;
-    margin-right: 15px;
+
     vertical-align: middle;
 
     display: inline-flex;
@@ -124,6 +124,72 @@ header a{
 
 .toggle-stamp-button:hover{color:rgb(69, 187, 85); pointer-events: all;cursor:help;}
 
+
+/* mobile nav style */
+
+header > #nav-mobile > span {
+    color: #fff;
+    margin-right: 12px;
+    margin-left: -5px;
+    vertical-align: middle;
+   //  box-shadow: 0px 2px 4px black;
+    display: inline-flex;
+    padding-top: 12px;
+    padding-right: 4px;
+    padding-bottom: 12px;
+    padding-left: 4px;
+    margin-top: 3.5px;
+    text-shadow: 1px 2px 1px black;
+   //  background-color: rgba(38, 38, 38, 1);
+   font-size: 12.5px !important;
+}
+header > #nav-mobile > span.logo{float:left; margin-left: 0px;
+   background-size: 52px auto;
+     background-repeat: no-repeat;
+  z-index: 999999;
+pointer-events: all;}
+header > #nav-mobile > span.logo a {
+      opacity: 1;
+      cursor: w-resize;
+      height: 28px;
+      width: 20px;
+      top: 0;
+      left: 0;
+      font-size: 22px;
+      font-weight: bold;
+      font-family: sans-serif;
+      margin-top: -4.5px;
+      pointer-events: all;
+  }
+
+header > #nav-mobile > span.logo a:hover {
+      color: #ededed;
+  }
+
+
+
+header > #nav-mobile > span:hover {
+    color: #fff;
+    margin-right: 12px;
+    margin-left: -5px;
+    vertical-align: middle;
+
+    display: inline-flex;
+    padding-top: 12px;
+    padding-right: 4px;
+    padding-bottom: 12px;
+    padding-left: 4px;
+    margin-top: 3.5px;
+    text-shadow: 1px 2px 1px black;
+    transition: 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+header > #nav-mobile > a{
+   text-decoration: none !important;
+   color:white;
+}
+
+header > #nav-mobile > .toggle-stamp-button:hover{color:rgb(69, 187, 85); pointer-events: all;cursor:help;}
 
 
 

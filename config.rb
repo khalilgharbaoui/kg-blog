@@ -34,7 +34,7 @@ activate :search_engine_sitemap
 configure :build do
   activate :build_cleaner
 end
-
+# page "/resume", :layout => "resume"
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"

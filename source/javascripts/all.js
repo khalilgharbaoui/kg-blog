@@ -97,20 +97,33 @@ $(document).ready(function() {
     if (window.location.pathname === '/about/' ||
     window.location.pathname === '/my-work/' ||
     window.location.pathname === '/blog/'
-  ) {
+    ) {
 
-      $("#back-button").hide();
-      $("#about-me-button").show();
-      $("#my-work-button").show();
-      $("#blog-button").show();
-      $("#contact-me-button").show();
+      $("#contact-button, #nav-mobile > #contact-button").hide();
+
+      $("#back-button, #nav-mobile > #back-button").hide();
+      $("#about-me-button, #nav-mobile > #about-me-button").show();
+      $("#my-work-button, #nav-mobile > #my-work-button").show();
+      $("#blog-button, #nav-mobile > #blog-button").show();
+      $("#resume-button, #nav-mobile > #resume-button").show();
+
     }
     else {
-      $("#back-button").show();
-      $("#about-me-button").hide();
-      $("#my-work-button").hide();
-      $("#blog-button").hide();
-      $("#contact-me-button").hide();
+      $("#contact-button, #nav-mobile > #contact-button").hide();
+
+      $("#back-button, #nav-mobile > #back-button").show();
+      $("#about-me-button, #nav-mobile > #about-me-button").hide();
+      $("#my-work-button, #nav-mobile > #my-work-button").hide();
+      $("#blog-button, #nav-mobile > #blog-button").hide();
+      $("#resume-button, #nav-mobile > #resume-button").hide();
+
+    }
+
+    if (window.location.pathname === '/resume/'
+    ) {
+
+
+      $("#contact-button, #nav-mobile > #contact-button").show();
 
     }
 
