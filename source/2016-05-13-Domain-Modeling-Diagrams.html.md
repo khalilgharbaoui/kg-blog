@@ -9,7 +9,7 @@ class: blogpost
 
 ![Domain Modeling Diagram](../images/domain-model-diagram.png "Domain Modeling Diagrams")
 
-As i was trying to make a many to many relationship while modeling a new project i'm working on, it crossed my mind to have a visual representation of how it would all look like.
+As i was trying to make relationships while modeling a new project i'm working on, it crossed my mind to have a visual representation of how it would all look like.
 I had already made my mind-map before starting to work on the project but that did not answer the question "How can i visualize existing projects?"
 
 
