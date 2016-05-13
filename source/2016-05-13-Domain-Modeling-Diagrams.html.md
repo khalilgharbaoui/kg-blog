@@ -11,9 +11,9 @@ class: blogpost
 
 As i was trying to make a many to many relationship while modeling a new project i'm working on, it crossed my mind to have a visual representation of how it would all look like.
 
-Of course i had already made my mind-map before starting to work on the project but as i was done creating the models i wanted to actually see what i've made in a diagram.
+I had already made my mind-map before starting to work on the project but that did not answer the question "How can i visualize existing projects?"
 
-The question "How can i visualize existing projects?" also hit my mind at that moment.
+
 
 So i decided to do some digging around and it did not take me long to find out 2 of my favorite Gems.
 
