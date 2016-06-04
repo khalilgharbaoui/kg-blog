@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   var $grid = $('.grid').packery({
     // disable initial layout
     itemSelector: '.grid-item',
@@ -94,6 +95,12 @@ $(document).ready(function() {
     //   // bind Draggabilly events to Packery
     // $grid.packery( 'bindDraggabillyEvents', draggie );
     // }
+    if (window.location.pathname !== '/my-work/'){
+    $('#my-work-button').addClass('pulse');
+    }
+
+
+
     if (window.location.pathname === '/about/' ||
     window.location.pathname === '/my-work/' ||
     window.location.pathname === '/blog/'
