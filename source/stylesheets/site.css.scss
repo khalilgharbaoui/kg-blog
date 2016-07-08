@@ -472,6 +472,12 @@ img {
 
   height:300px;
 }
+.grid-item-super-large {
+
+  padding: 20px;
+
+
+}
 .grid-item-heading h1{color:#fff !important; text-shadow: 0px 4px 0px black;}
 .grid-item-heading{
 
@@ -669,6 +675,9 @@ li {
 }
 /* Smartphones (portrait and landscape) ----------- */
 @media (min-width: 320px) and (max-width: 480px) {
+  #seperator-box{
+    display:none !important;
+  }
   .grid-item .blogdate {
     width: 107.1%;
   }
@@ -763,6 +772,9 @@ font-size:16px;
 
 /* Smartphones (portrait) ----------- */
 @media (max-width: 320px) {
+  #seperator-box{
+    display:none !important;
+  }
   /* Styles */
   .box {
     margin: 100px auto 60px;
@@ -846,6 +858,9 @@ font-size:16px;
 }
 /* iPads (portrait and landscape) ----------- */
 @media (min-width: 481px) and (max-width: 767px) {
+  #seperator-box{
+    display:none !important;
+  }
   #nav-mobile{
     display: none !important;
   }
@@ -896,6 +911,7 @@ font-size:16px;
 }
 /* iPads (portrait and landscape) ----------- */
 @media (min-width: 768px) and (max-width: 1024px) {
+
   #nav-mobile{
     display: none !important;
   }
@@ -923,9 +939,23 @@ font-size:16px;
     width: 94%;
 
   }
+  .grid-item-super-large {
+
+    width: 94%;
+
+  }
 }
 /* Desktops and laptops ----------- */
 @media (min-width: 1025px) {
+  .codaisseur-box{
+    height: 540px !important;
+  }
+  .grid-item-super-large {
+
+    width: 95.6%;
+    height: 540px
+  }
+
   #nav-mobile{
     display: none !important;
   }
@@ -1074,6 +1104,14 @@ font-size:16px;
 }
 
 button.flip-it{bottom:0;position: absolute;width:100%; height:50px;border:none; color:#fff;background-color: #000;}
+
+
+#codaisseur{
+  background-image: url('../images/codaisseur.gif');
+  background-size: cover;
+
+}
+
 #portfolio-1{
   background-image: url('../images/Codeschool-reviews-isometric-perspective.png');
   background-size: cover;
