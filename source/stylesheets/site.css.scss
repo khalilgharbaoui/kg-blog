@@ -1023,6 +1023,23 @@ font-size:16px;
 
 
 
+.noflipcard { // card that does not flip
+    position: relative;
+    height: auto;
+    min-height: 0px;
+    /* Flip card styles: WebKit, FF, Opera */
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -webkit-transition: min-height 1s ease-out 0s, -webkit-transform 1s ease-out;
+    -moz-transition: min-height 1s ease-out 0s, -moz-transform 1s ease-out;
+    -o-transition: min-height 1s ease-out 0s, -o-transform 1s ease-out;
+    /* only height adjustment for IE here */
+    -ms-transition: min-height 1s ease-out 0s;
+}
 .flipcard {
     position: relative;
     height: auto;
